@@ -1,0 +1,152 @@
+{
+  "theme": "light",
+  "archetype": "1_organic_and_earthy",
+  "typography": {
+    "headings": {
+      "font_family": "Playfair Display, serif",
+      "weights": ["400", "600", "900"],
+      "tracking": "tracking-tight",
+      "h1_size": "text-4xl sm:text-5xl lg:text-6xl",
+      "h2_size": "text-3xl sm:text-4xl lg:text-5xl",
+      "h3_size": "text-2xl sm:text-3xl"
+    },
+    "body": {
+      "font_family": "Manrope, sans-serif",
+      "weights": ["300", "400", "500"],
+      "base_size": "text-base lg:text-lg",
+      "leading": "leading-relaxed"
+    },
+    "labels": {
+      "font_family": "Manrope, sans-serif",
+      "weights": ["700"],
+      "size": "text-xs sm:text-sm",
+      "tracking": "tracking-[0.2em]",
+      "transform": "uppercase"
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#F9F8F6",
+      "secondary": "#EFECE7",
+      "tertiary": "#2C402E"
+    },
+    "text": {
+      "primary": "#1A1A1A",
+      "secondary": "#4A4A4A",
+      "inverse": "#F9F8F6",
+      "accent": "#9E4723"
+    },
+    "brand": {
+      "primary": "#2C402E",
+      "accent_1": "#9E4723",
+      "accent_2": "#D4A373",
+      "border": "#E2DFD9"
+    }
+  },
+  "layout_spacing": {
+    "section_padding": "py-20 md:py-32",
+    "container_padding": "px-4 sm:px-6 lg:px-8",
+    "grid_gaps": "gap-8 lg:gap-12",
+    "border_radius": "rounded-none md:rounded-lg",
+    "component_padding": "p-6 md:p-10"
+  },
+  "surfaces": {
+    "cards": "bg-[#F9F8F6] border border-[#E2DFD9] shadow-none hover:-translate-y-1 hover:shadow-lg transition-all duration-300",
+    "glass": "bg-white/70 backdrop-blur-xl border-b border-white/40 shadow-sm",
+    "dark_section": "bg-[#2C402E] text-[#F9F8F6]"
+  },
+  "motion": {
+    "default_transition": "transition-all duration-300 ease-out",
+    "hover_lift": "-translate-y-1",
+    "marquee": "slow continuous smooth movement for farmer impact stats"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#2C402E] text-[#F9F8F6] px-8 py-4 rounded-full font-medium tracking-wide hover:bg-[#1f2d20] transition-colors",
+      "secondary": "border border-[#2C402E] text-[#2C402E] px-8 py-4 rounded-full font-medium tracking-wide hover:bg-[#2C402E] hover:text-[#F9F8F6] transition-colors"
+    },
+    "inputs": "bg-transparent border-b border-[#E2DFD9] rounded-none px-0 py-3 focus:border-[#2C402E] focus:ring-0 transition-colors"
+  },
+  "icons_library": "lucide-react",
+  "media": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1764277434161-23d72931335f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwyfHxhZ3JpY3VsdHVyZSUyMGxhbmRzY2FwZSUyMGZhcm0lMjBzdW5zZXR8ZW58MHx8fHwxNzc0ODk0ODA2fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Tractor plowing field at sunset, representing hard work and source of food.",
+      "usage": "Hero section background with bg-black/40 overlay."
+    },
+    "about_farmers": {
+      "url": "https://images.pexels.com/photos/18620451/pexels-photo-18620451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Elderly farmer with a beard holds a bucket in a lush green rice field.",
+      "usage": "About section or Farmer Network section to highlight Rupwara Marwan Fed Farmers."
+    },
+    "about_farmers_2": {
+      "url": "https://images.pexels.com/photos/29912210/pexels-photo-29912210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Elderly Indian farmer laboring in a dry field under summer sun.",
+      "usage": "Farmer empowerment storytelling section."
+    },
+    "products_grains": {
+      "url": "https://images.pexels.com/photos/1393382/pexels-photo-1393382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Bags of vibrant grains and spices on display.",
+      "usage": "Products overview section - Grains & Spices."
+    },
+    "products_spices": {
+      "url": "https://images.unsplash.com/photo-1706793990285-b2a7d9aaf17d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHw0fHxmcmVzaCUyMG9yZ2FuaWMlMjBncmFpbnMlMjBzcGljZXMlMjBtYXJrZXR8ZW58MHx8fHwxNzc0ODk0Nzg2fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Buckets filled with different types of spices.",
+      "usage": "Products overview section - Natural food products."
+    },
+    "sustainability": {
+      "url": "https://images.pexels.com/photos/33786776/pexels-photo-33786776.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Aerial view of agricultural fields under a warm sunset sky.",
+      "usage": "Sustainability or 'Why Choose Us' background."
+    }
+  },
+  "sections": [
+    {
+      "name": "Hero",
+      "layout": "Full screen min-h-screen relative flex items-center justify-center. Hero background image with bg-black/40 overlay. Text is vertically centered.",
+      "typography": "H1 text-white Playfair Display. Subtitle text-white/90 Manrope. Use Tracking-tight for H1.",
+      "elements": "Call to action button (Primary)."
+    },
+    {
+      "name": "About Brand & FPO",
+      "layout": "Asymmetric bento grid (Tetris Mode). 12-column grid. Left side: large image of farmers. Right side: Text block explaining Ruwan Agro & Rupwara Marwan FPO mission.",
+      "style": "bg-[#F9F8F6] text-[#1A1A1A] py-32."
+    },
+    {
+      "name": "Products Overview",
+      "layout": "Grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8. Minimalist product cards.",
+      "style": "Images take 70% height, text below. No background, just crisp 1px borders."
+    },
+    {
+      "name": "Farmer Network Impact",
+      "layout": "Dark section bg-[#2C402E] text-white. Large statistics numbers.",
+      "elements": "Use 'Editorial Ribbon' marquee running in the background with text like 'EMPOWERING BIHAR FARMERS • DIRECT FROM SOURCE •'."
+    },
+    {
+      "name": "Sustainability & Why Choose Us",
+      "layout": "2-column layout. One side image (sustainability), other side bulleted list of value props with custom icons (lucide-react).",
+      "style": "Terracotta accents #9E4723 for icons and borders."
+    },
+    {
+      "name": "Contact & Footer",
+      "layout": "Generous spacing py-24. 2 columns: Left side Contact info (address, phone, email). Right side Shadcn form customized for the theme.",
+      "style": "bg-[#EFECE7]. Massive footer logo/text."
+    }
+  ],
+  "accessibility": {
+    "contrast": "Ensure text over images uses text-shadow or appropriate overlay (bg-black/40). All form inputs must have aria-labels.",
+    "interactions": "All interactive elements must include 'data-testid' (e.g., data-testid='contact-submit-button').",
+    "focus": "focus:ring-2 focus:ring-[#2C402E] focus:outline-none"
+  },
+  "instructions_to_main_agent": [
+    "Use Tailwind CSS for all styling, avoid raw CSS where possible.",
+    "Do NOT use HTML <input> or <form> directly for complex parts; use Shadcn UI components but heavily override them to match the Archetype 1 (Organic & Earthy) style.",
+    "Do NOT use Inter font for headings. Use Playfair Display.",
+    "Do NOT use a generic blue/purple CTA. Use the Forest Green (#2C402E) or Terracotta (#9E4723).",
+    "Hero image MUST have a max overlay opacity of bg-black/40.",
+    "Use lucide-react for all icons.",
+    "All interactive elements must have a data-testid attribute.",
+    "The grid must use CSS grid with wide gaps (gap-8 or gap-12).",
+    "Implement 'Editorial Ribbon' marquee for the Farmer Impact section using framer-motion or react-fast-marquee."
+  ]
+}
