@@ -1,0 +1,16 @@
+{
+  "name": "Ruwan Agro",
+  "short_name": "Ruwan Agro",
+  "description": "Farmer-first agro brand offering naturally grown products and rural leadership from Bihar.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9f8f6",
+  "theme_color": "#2C402E",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

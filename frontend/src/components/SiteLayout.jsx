@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
-import { Link, useLocation } from "react-router-dom";
+import { useEffect, useMemo, useState } from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { Facebook, Mail, MapPin, Menu, Phone, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -17,9 +16,156 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const seo = useMemo(() => {
+    const origin = typeof window !== "undefined" ? window.location.origin : "";
+
+    switch (location.pathname) {
+      case "/about":
+        return {
+          title: `${copy.about.title} | ${siteContent.brand.name}`,
+          description: copy.about.description,
+          image: siteContent.media.aboutFarmer,
+          schema: {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            name: copy.about.title,
+            description: copy.about.description,
+            url: `${origin}/about`,
+          },
+        };
+      case "/founder":
+        return {
+          title: `${copy.founder.title} | ${siteContent.brand.name}`,
+          description: copy.founder.subtitle,
+          image: siteContent.media.founderPrimary,
+          schema: {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: copy.founder.title,
+            jobTitle: language === "hi" ? "संस्थापक" : "Founder",
+            description: copy.founder.subtitle,
+            image: siteContent.media.founderPrimary,
+            worksFor: {
+              "@type": "Organization",
+              name: siteContent.brand.name,
+            },
+          },
+        };
+      case "/team":
+        return {
+          title: `${copy.team.title} | ${siteContent.brand.name}`,
+          description: copy.team.description,
+          image: siteContent.teamPhotos["mritunjay-kumar"],
+          schema: {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: siteContent.brand.name,
+            employee: siteContent.teamMembers.map((member) => ({
+              "@type": "Person",
+              name: member.name,
+              jobTitle: copy.team.memberRole,
+            })),
+          },
+        };
+      case "/products":
+        return {
+          title: `${copy.productsSection.title} | ${siteContent.brand.name}`,
+          description: copy.productsSection.description,
+          image: siteContent.media.productBrownRice,
+          schema: {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: copy.productsSection.title,
+            description: copy.productsSection.description,
+          },
+        };
+      case "/contact":
+        return {
+          title: `${copy.contactSection.title} | ${siteContent.brand.name}`,
+          description: copy.contactSection.description,
+          image: siteContent.brand.logo,
+          schema: {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            name: copy.contactSection.title,
+            description: copy.contactSection.description,
+          },
+        };
+      default:
+        return {
+          title: `${siteContent.brand.name} | ${copy.hero.title}`,
+          description: copy.hero.subtitle,
+          image: siteContent.media.founderPrimary,
+          schema: {
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                name: siteContent.brand.name,
+                url: origin,
+                logo: siteContent.brand.logo,
+                sameAs: [siteContent.socials.facebook],
+              },
+              {
+                "@type": "WebSite",
+                name: siteContent.brand.name,
+                url: origin,
+              },
+            ],
+          },
+        };
+    }
+  }, [copy, language, location.pathname]);
+
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    document.documentElement.lang = language === "hi" ? "hi" : "en";
+    document.title = seo.title;
+
+    const ensureMeta = (selector, attrs) => {
+      let element = document.head.querySelector(selector);
+      if (!element) {
+        element = document.createElement("meta");
+        Object.entries(attrs).forEach(([key, value]) => element.setAttribute(key, value));
+        document.head.appendChild(element);
+      }
+      return element;
+    };
+
+    ensureMeta('meta[name="description"]', { name: "description" }).setAttribute("content", seo.description);
+    ensureMeta('meta[name="robots"]', { name: "robots" }).setAttribute("content", "index, follow");
+    ensureMeta('meta[property="og:site_name"]', { property: "og:site_name" }).setAttribute("content", siteContent.brand.name);
+    ensureMeta('meta[property="og:title"]', { property: "og:title" }).setAttribute("content", seo.title);
+    ensureMeta('meta[property="og:description"]', { property: "og:description" }).setAttribute("content", seo.description);
+    ensureMeta('meta[property="og:type"]', { property: "og:type" }).setAttribute("content", "website");
+    ensureMeta('meta[property="og:url"]', { property: "og:url" }).setAttribute("content", window.location.href);
+    ensureMeta('meta[property="og:image"]', { property: "og:image" }).setAttribute("content", seo.image);
+    ensureMeta('meta[property="og:locale"]', { property: "og:locale" }).setAttribute("content", language === "hi" ? "hi_IN" : "en_IN");
+    ensureMeta('meta[name="twitter:card"]', { name: "twitter:card" }).setAttribute("content", "summary_large_image");
+    ensureMeta('meta[name="twitter:title"]', { name: "twitter:title" }).setAttribute("content", seo.title);
+    ensureMeta('meta[name="twitter:description"]', { name: "twitter:description" }).setAttribute("content", seo.description);
+    ensureMeta('meta[name="twitter:image"]', { name: "twitter:image" }).setAttribute("content", seo.image);
+
+    let canonical = document.head.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute("href", window.location.href);
+
+    let structuredData = document.head.querySelector("#structured-data");
+    if (!structuredData) {
+      structuredData = document.createElement("script");
+      structuredData.setAttribute("id", "structured-data");
+      structuredData.setAttribute("type", "application/ld+json");
+      document.head.appendChild(structuredData);
+    }
+    structuredData.textContent = JSON.stringify(seo.schema);
+  }, [language, seo]);
 
   return (
     <div className="min-h-screen bg-[var(--page-bg)] text-[#1A1A1A]">
@@ -34,6 +180,9 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
                 alt="Ruwan Agro logo"
                 className="h-full w-full object-contain"
                 data-testid="brand-logo-image"
+                decoding="async"
+                fetchPriority="high"
+                loading="eager"
                 src={siteContent.brand.logo}
               />
             </div>
@@ -188,6 +337,8 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
                     alt="Ruwan Agro logo"
                     className="h-full w-full object-contain"
                     data-testid="footer-logo-image"
+                    decoding="async"
+                    loading="lazy"
                     src={siteContent.brand.logo}
                   />
                 </div>

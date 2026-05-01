@@ -69,7 +69,9 @@ const ProductCard = ({ product }) => (
       <img
         alt={product.title}
         className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+        decoding="async"
         data-testid={`product-image-${product.id}`}
+        loading="lazy"
         src={productImages[product.id]}
       />
     </div>
@@ -138,7 +140,10 @@ export const HeroSection = ({ copy }) => (
       <img
         alt="Agricultural landscape"
         className="h-full w-full object-cover"
+        decoding="async"
         data-testid="hero-background-image"
+        fetchPriority="high"
+        loading="eager"
         src={siteContent.media.hero}
       />
       <div className="absolute inset-0 bg-black/40" />
@@ -210,7 +215,9 @@ export const HeroSection = ({ copy }) => (
                   <img
                     alt="Ruwan Agro logo"
                     className="h-full w-full object-contain"
+                    decoding="async"
                     data-testid="hero-brand-logo-image"
+                    loading="eager"
                     src={siteContent.brand.logo}
                   />
                 </div>
@@ -246,10 +253,10 @@ export const AboutSection = ({ copy }) => (
       <div className="order-2 lg:order-1 lg:col-span-5">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
           <div className="overflow-hidden rounded-[2rem] border border-[#E2DFD9] bg-[#efece7]">
-            <img alt="Farmer community" className="aspect-[4/3] h-full w-full object-cover sm:aspect-[4/5]" data-testid="about-farmer-image" src={siteContent.media.aboutFarmer} />
+            <img alt="Farmer community" className="aspect-[4/3] h-full w-full object-cover sm:aspect-[4/5]" data-testid="about-farmer-image" decoding="async" loading="lazy" src={siteContent.media.aboutFarmer} />
           </div>
           <div className="overflow-hidden rounded-[2rem] border border-[#E2DFD9] bg-[#efece7]">
-            <img alt="Agricultural field" className="aspect-[4/3] h-full w-full object-cover" data-testid="about-field-image" src={siteContent.media.aboutField} />
+            <img alt="Agricultural field" className="aspect-[4/3] h-full w-full object-cover" data-testid="about-field-image" decoding="async" loading="lazy" src={siteContent.media.aboutField} />
           </div>
         </div>
       </div>
@@ -297,7 +304,7 @@ export const FounderSection = ({ copy, language }) => (
     <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
       <div className="order-2 space-y-6 lg:order-1">
         <div className="hidden overflow-hidden rounded-[2rem] border border-[#E2DFD9] bg-[linear-gradient(180deg,#f7f4ee_0%,#efe6d9_100%)] p-4 sm:p-6 lg:block">
-          <img alt={copy.founder.title} className="aspect-[4/3] h-full w-full object-contain sm:aspect-square lg:aspect-[4/5]" data-testid="founder-primary-image" src={siteContent.media.founderPrimary} />
+          <img alt={copy.founder.title} className="aspect-[4/3] h-full w-full object-contain sm:aspect-square lg:aspect-[4/5]" data-testid="founder-primary-image" decoding="async" loading="lazy" src={siteContent.media.founderPrimary} />
         </div>
 
         <div className="rounded-[2rem] border border-[#E2DFD9] bg-[#2C402E] p-6 text-[#F9F8F6]" data-testid="founder-quote-card">
@@ -317,7 +324,9 @@ export const FounderSection = ({ copy, language }) => (
           <img
             alt={copy.founder.title}
             className="aspect-square h-full w-full object-contain"
+            decoding="async"
             data-testid="founder-primary-image"
+            loading="lazy"
             src={siteContent.media.founderPrimary}
           />
         </div>
@@ -374,7 +383,7 @@ export const FounderSection = ({ copy, language }) => (
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
         {copy.founder.gallery.map((item, index) => (
           <div className="overflow-hidden rounded-[1.75rem] border border-[#E2DFD9] bg-[#F9F8F6]" data-testid={`founder-gallery-card-${item.id}`} key={`${language}-${item.id}`}>
-            <img alt={item.title} className="aspect-[4/5] h-full w-full object-cover" data-testid={`founder-gallery-image-${item.id}`} src={founderGalleryImages[index]} />
+            <img alt={item.title} className="aspect-[4/5] h-full w-full object-cover" data-testid={`founder-gallery-image-${item.id}`} decoding="async" loading="lazy" src={founderGalleryImages[index]} />
             <div className="space-y-3 p-5">
               <h4 className="font-[Playfair_Display] text-2xl text-[#1A1A1A]" data-testid={`founder-gallery-item-title-${item.id}`}>{item.title}</h4>
               <p className="text-sm leading-7 text-[#4A4A4A]" data-testid={`founder-gallery-item-caption-${item.id}`}>{item.caption}</p>
@@ -440,7 +449,7 @@ export const ValuesSection = ({ copy }) => (
     <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
       <div className="order-2 space-y-6 lg:order-1">
         <div className="overflow-hidden rounded-[2rem] border border-[#E2DFD9] bg-[#efece7]">
-          <img alt="Sustainable farming landscape" className="aspect-[4/3] h-full w-full object-cover sm:aspect-[4/5]" data-testid="why-us-image" src={siteContent.media.sustainability} />
+          <img alt="Sustainable farming landscape" className="aspect-[4/3] h-full w-full object-cover sm:aspect-[4/5]" data-testid="why-us-image" decoding="async" loading="lazy" src={siteContent.media.sustainability} />
         </div>
         <div className="rounded-[2rem] border border-[#E2DFD9] bg-[#F9F8F6] p-6" data-testid="core-values-panel">
           <SectionEyebrow testId="core-values-eyebrow">{copy.valuesSection.coreValuesLabel}</SectionEyebrow>
@@ -499,7 +508,9 @@ export const TeamSection = ({ copy }) => (
           <img
             alt="Mahant Mritunjay Das"
             className="aspect-square h-full w-full object-contain"
+            decoding="async"
             data-testid="team-founder-feature-image"
+            loading="lazy"
             src={siteContent.teamPhotos["mritunjay-kumar"]}
           />
         </div>
@@ -530,7 +541,9 @@ export const TeamSection = ({ copy }) => (
                   <img
                     alt={member.name}
                     className="h-full w-full object-cover"
+                    decoding="async"
                     data-testid={`team-member-avatar-image-${member.id}`}
+                    loading="lazy"
                     src={siteContent.teamPhotos[member.id]}
                   />
                 ) : (
