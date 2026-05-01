@@ -70,3 +70,6 @@ I need a static website to showcase the info
 - Added robots.txt, sitemap.xml, favicon.svg, and site.webmanifest for stronger crawlability and site metadata completeness.
 - Improved frontend performance by removing heavy third-party head scripts/badges, moving font loading to the document head, and lazy-loading non-critical images with async decoding.
 - Added semantic H1 structure for route pages and normalized canonicals to exclude query parameters for better SEO consistency.
+
+## Homepage Performance Refinements
+- Slimmed the homepage by replacing the full founder and full contact sections with lighter preview sections, while preserving full content on their dedicated pages for better speed and reduced content depth.
