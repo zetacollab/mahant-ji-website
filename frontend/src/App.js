@@ -178,8 +178,13 @@ function App() {
               data-testid="brand-home-link"
               href="#top"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#d9d2c6] bg-white text-[#2C402E]">
-                <Sprout className="h-5 w-5" data-testid="brand-logo-icon" />
+              <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-[1.25rem] border border-[#d9d2c6] bg-white p-2 shadow-sm">
+                <img
+                  alt="Ruwan Agro logo"
+                  className="h-full w-full object-contain"
+                  data-testid="brand-logo-image"
+                  src={siteContent.brand.logo}
+                />
               </div>
               <div>
                 <p
@@ -300,6 +305,19 @@ function App() {
                       >
                         Rooted in rural India
                       </p>
+                      <div className="mb-4 flex w-fit items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 backdrop-blur-sm" data-testid="hero-brand-chip">
+                        <div className="h-10 w-10 overflow-hidden rounded-full bg-white p-1.5">
+                          <img
+                            alt="Ruwan Agro logo"
+                            className="h-full w-full object-contain"
+                            data-testid="hero-brand-logo-image"
+                            src={siteContent.brand.logo}
+                          />
+                        </div>
+                        <span className="text-sm font-semibold tracking-[0.12em] text-white/90" data-testid="hero-brand-chip-name">
+                          {siteContent.brand.name}
+                        </span>
+                      </div>
                       <h2
                         className="font-[Playfair_Display] text-3xl"
                         data-testid="hero-highlight-title"
@@ -564,13 +582,23 @@ function App() {
 
         <footer className="bg-[#2C402E] px-4 py-10 text-[#F9F8F6] sm:px-6 lg:px-8" data-testid="site-footer">
           <div className="mx-auto flex max-w-7xl flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p className="font-[Playfair_Display] text-3xl" data-testid="footer-brand-name">
-                {siteContent.brand.name}
-              </p>
-              <p className="mt-2 max-w-xl text-sm leading-7 text-white/70" data-testid="footer-brand-description">
-                Choose better. Support farmers. Live healthier.
-              </p>
+            <div className="flex items-center gap-4">
+              <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-[1.25rem] bg-white p-2 shadow-sm" data-testid="footer-logo-wrapper">
+                <img
+                  alt="Ruwan Agro logo"
+                  className="h-full w-full object-contain"
+                  data-testid="footer-logo-image"
+                  src={siteContent.brand.logo}
+                />
+              </div>
+              <div>
+                <p className="font-[Playfair_Display] text-3xl" data-testid="footer-brand-name">
+                  {siteContent.brand.name}
+                </p>
+                <p className="mt-2 max-w-xl text-sm leading-7 text-white/70" data-testid="footer-brand-description">
+                  Choose better. Support farmers. Live healthier.
+                </p>
+              </div>
             </div>
             <p className="text-sm uppercase tracking-[0.16em] text-white/60" data-testid="footer-supporting-text">
               {siteContent.brand.supportingName}

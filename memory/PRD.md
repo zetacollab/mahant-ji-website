@@ -10,19 +10,19 @@ I need a static website to showcase the info
 - Followed the generated design direction: light organic earthy theme, Playfair Display headings, Manrope body text, image-led storytelling, and strong farmer-impact sections.
 
 ## What’s Implemented
-- Branded hero section for Ruwan Agro Products with strong CTAs and trust/impact highlights.
+- Branded hero section for Ruwan Agro with updated tagline, latest address details, and trust/impact highlights.
 - About section blending Ruwan Agro brand story with Rupwara Marwan Fed FPO foundation and mission/vision.
 - Products overview section for grains & cereals, natural agro products, and value-added products.
 - Farmer impact section with marquee treatment and key stats.
 - Sustainability / why choose us section with value cards and core values.
 - Contact section with address, phone, email, website, farmer support numbers, and a working inquiry form.
 - Backend API endpoint: `POST /api/inquiries` plus existing root API health response.
-- Automated testing coverage added for the marketing site API; frontend and backend verification passed.
+- Updated website branding to use the newly provided Ruwan Agro logo in the header, hero brand chip, and footer.
 
 ## Prioritized Backlog
 ### P0
 - Replace stock imagery with official brand/farm/product photos from the business.
-- Confirm final contact details, website domain, and any approved product catalog copy.
+- Confirm final brand copy, domain usage, and any approved product catalog details.
 
 ### P1
 - Add bilingual support (English/Hindi) using the Hindi FPO content from the uploaded PDF.

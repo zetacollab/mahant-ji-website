@@ -1,13 +1,14 @@
 export const siteContent = {
   brand: {
-    name: "Ruwan Agro Products",
+    name: "Ruwan Agro",
     supportingName: "Backed by Rupwara Marwan Fed Farmers Producer Company Limited",
-    location: "Repura, Muzaffarpur, Bihar",
+    location: "Rupwara, Muzaffarpur, Bihar",
     website: "ruwanagro.com",
+    logo: "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/c422mrxs_WhatsApp%20Image%202026-05-01%20at%2018.45.23.jpeg",
   },
   hero: {
     eyebrow: "Farmer-first agro brand",
-    title: "Direct from Farmers to Your Kitchen.",
+    title: "Direct from Farmers. Naturally Grown. Honestly Delivered.",
     subtitle:
       "Ruwan Agro Products brings naturally grown produce, transparent sourcing, and a strong farmer network together to deliver food with trust, purity, and purpose.",
     primaryCta: "Explore our products",
@@ -104,7 +105,7 @@ export const siteContent = {
     "Stronger rural communities",
   ],
   contact: {
-    address: "Repura, Muzaffarpur, Bihar 843113",
+    address: "Rupwara, Muzaffarpur, Bihar, India",
     email: "ruwanagro26@gmail.com",
     phone: "+91 91554 17338",
     farmerSupport: ["9304777460", "9661361212"],
