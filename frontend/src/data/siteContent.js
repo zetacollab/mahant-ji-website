@@ -15,6 +15,9 @@ export const siteContent = {
     farmerSupport: ["9304777460", "9661361212"],
     website: "https://ruwanagro.com",
   },
+  socials: {
+    facebook: "https://www.facebook.com/mrityunjay.kumar.5439087",
+  },
   teamMembers: [
     {
       id: "mritunjay-kumar",

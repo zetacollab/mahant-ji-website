@@ -56,3 +56,6 @@ I need a static website to showcase the info
 
 ## Product Media Updates
 - Replaced generic product visuals with the newly provided real product images for brown rice, nutritious millets, and spice/masala ranges, and aligned the product copy to match them.
+
+## Footer Updates
+- Upgraded the footer into a richer constant site-wide footer with quick links, contact details, a Facebook icon/link, and a stronger brand presentation.

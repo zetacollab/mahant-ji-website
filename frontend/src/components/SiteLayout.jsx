@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Facebook, Mail, MapPin, Menu, Phone, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { siteContent } from "@/data/siteContent";
@@ -179,28 +179,103 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
       <Outlet />
 
       <footer className="bg-[#2C402E] px-4 py-10 text-[#F9F8F6] sm:px-6 lg:px-8" data-testid="site-footer">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <div className="flex items-center gap-4">
-            <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-[1.25rem] bg-white p-2 shadow-sm" data-testid="footer-logo-wrapper">
-              <img
-                alt="Ruwan Agro logo"
-                className="h-full w-full object-contain"
-                data-testid="footer-logo-image"
-                src={siteContent.brand.logo}
-              />
+        <div className="mx-auto max-w-7xl space-y-10">
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.7fr_0.8fr]">
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-[1.25rem] bg-white p-2 shadow-sm" data-testid="footer-logo-wrapper">
+                  <img
+                    alt="Ruwan Agro logo"
+                    className="h-full w-full object-contain"
+                    data-testid="footer-logo-image"
+                    src={siteContent.brand.logo}
+                  />
+                </div>
+                <div>
+                  <p className="font-[Playfair_Display] text-3xl" data-testid="footer-brand-name">
+                    {siteContent.brand.name}
+                  </p>
+                  <p className="mt-2 max-w-xl text-sm leading-7 text-white/70" data-testid="footer-brand-description">
+                    {copy.footer.tagline}
+                  </p>
+                </div>
+              </div>
+
+              <p className="max-w-xl text-sm leading-7 text-white/70" data-testid="footer-supporting-text">
+                {copy.footer.supportingText}
+              </p>
             </div>
-            <div>
-              <p className="font-[Playfair_Display] text-3xl" data-testid="footer-brand-name">
-                {siteContent.brand.name}
+
+            <div className="space-y-4">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4A373]" data-testid="footer-links-title">
+                Quick links
               </p>
-              <p className="mt-2 max-w-xl text-sm leading-7 text-white/70" data-testid="footer-brand-description">
-                {copy.footer.tagline}
+              <div className="grid gap-3" data-testid="footer-links-list">
+                {copy.navigation.map((item, index) => (
+                  <Link
+                    className="text-sm text-white/80 transition hover:text-white"
+                    data-testid={`footer-link-${index + 1}`}
+                    key={`${language}-footer-${item.label}`}
+                    to={item.path}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4A373]" data-testid="footer-contact-title">
+                Contact & social
               </p>
+              <div className="grid gap-4">
+                <a
+                  className="flex items-start gap-3 text-sm text-white/80 transition hover:text-white"
+                  data-testid="footer-address-link"
+                  href="https://maps.google.com/?q=Rupwara,+Muzaffarpur,+Bihar,+India"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
+                  <span>{siteContent.contact.address}</span>
+                </a>
+
+                <a
+                  className="flex items-center gap-3 text-sm text-white/80 transition hover:text-white"
+                  data-testid="footer-phone-link"
+                  href={`tel:${siteContent.contact.phone.replace(/\s+/g, "")}`}
+                >
+                  <Phone className="h-4 w-4 shrink-0" />
+                  <span>{siteContent.contact.phone}</span>
+                </a>
+
+                <a
+                  className="flex items-center gap-3 text-sm text-white/80 transition hover:text-white"
+                  data-testid="footer-email-link"
+                  href={`mailto:${siteContent.contact.email}`}
+                >
+                  <Mail className="h-4 w-4 shrink-0" />
+                  <span>{siteContent.contact.email}</span>
+                </a>
+
+                <a
+                  className="inline-flex h-12 w-fit items-center gap-3 rounded-full border border-white/15 bg-white/5 px-5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#2C402E]"
+                  data-testid="footer-facebook-link"
+                  href={siteContent.socials.facebook}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <Facebook className="h-4 w-4" />
+                  <span>Facebook</span>
+                </a>
+              </div>
             </div>
           </div>
-          <p className="text-sm uppercase tracking-[0.16em] text-white/60" data-testid="footer-supporting-text">
-            {copy.footer.supportingText}
-          </p>
+
+          <div className="flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
+            <p data-testid="footer-bottom-line">Direct from farmers. Naturally grown. Honestly delivered.</p>
+            <p data-testid="footer-copyright">© {new Date().getFullYear()} {siteContent.brand.name}</p>
+          </div>
         </div>
       </footer>
     </div>
