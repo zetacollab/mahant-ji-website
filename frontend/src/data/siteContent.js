@@ -15,6 +15,78 @@ export const siteContent = {
     farmerSupport: ["9304777460", "9661361212"],
     website: "https://ruwanagro.com",
   },
+  teamMembers: [
+    {
+      id: "mritunjay-kumar",
+      name: "Mritunjay Kumar",
+      role: "Director",
+      location: "Repura, Marwan, Muzaffarpur, Bihar",
+      email: "mrityunjayrepura@gmail.com",
+    },
+    {
+      id: "sanjay-kumar",
+      name: "Sanjay Kumar",
+      role: "Director",
+      location: "Repura, Marwan, Muzaffarpur, Bihar",
+      email: "skrepura@gmail.com",
+    },
+    {
+      id: "mukund-kumar",
+      name: "Mukund Kumar",
+      role: "Director",
+      location: "Repura, Marwan, Muzaffarpur, Bihar",
+      email: "mukundrepura10@gmail.com",
+    },
+    {
+      id: "moni-devi",
+      name: "Moni Devi",
+      role: "Director",
+      location: "Repura, Marwan, Muzaffarpur, Bihar",
+      email: "dmoni0128@gmail.com",
+    },
+    {
+      id: "dhananjay-kumar",
+      name: "Dhananjay Kumar",
+      role: "Director",
+      location: "Repura, Marwan, Muzaffarpur, Bihar",
+      email: "dhananjayrepura10@gmail.com",
+    },
+    {
+      id: "suresh-thakur",
+      name: "Suresh Thakur",
+      role: "Director",
+      location: "Chiknauta, Marwan, Muzaffarpur, Bihar",
+      email: "sureshchiknauta@gmail.com",
+    },
+    {
+      id: "ajay-kumar-thakur",
+      name: "Ajay Kumar Thakur",
+      role: "Director",
+      location: "Chiknauta, Marwan, Muzaffarpur, Bihar",
+      email: "ajaychiknauta@gmail.com",
+    },
+    {
+      id: "subodh-tiwary",
+      name: "Subodh Tiwary",
+      role: "Director",
+      location: "Bishnudattpur, Marwan, Muzaffarpur, Bihar",
+      email: "tiwarisubodhbishnudattpur@gmail.com",
+    },
+    {
+      id: "prabhat-chandra",
+      name: "Prabhat Chandra",
+      role: "Director",
+      location: "Repura, Marwan, Muzaffarpur, Bihar",
+      email: "prabhatrepura@gmail.com",
+    },
+    {
+      id: "umesh-ray",
+      name: "Umesh Ray",
+      role: "Director",
+      location: "Chiknauta, Marwan, Muzaffarpur, Bihar",
+      email: "umeshchiknauta@gmail.com",
+    },
+  ],
   media: {
     hero:
       "https://images.unsplash.com/photo-1764277434161-23d72931335f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwyfHxhZ3JpY3VsdHVyZSUyMGxhbmRzY2FwZSUyMGZhcm0lMjBzdW5zZXR8ZW58MHx8fHwxNzc0ODk0ODA2fDA&ixlib=rb-4.1.0&q=85",
@@ -72,7 +144,7 @@ export const siteContent = {
         eyebrow: "About brand & FPO",
         title: "A trusted bridge between farmers and families.",
         description:
-          "Built on the strength of Bihar’s farming communities, Ruwan Agro is a farmer-driven initiative focused on sustainability, fair market access, and honestly delivered food. Its foundation is closely linked with Rupwara Marwan Fed Farmers Producer Company Limited, which supports small and marginal farmers through collective development, better opportunities, and long-term growth.",
+          "Built on the strength of Bihar’s farming communities, Ruwan Agro is a farmer-driven initiative rooted in Repura, Muzaffarpur and focused on sustainability, fair market access, and honestly delivered food. Established under Rupwara Marwan Fed Farmers Producer Company Limited on 21st December 2022, it supports small and marginal farmers through collective development, better opportunities, and long-term growth.",
         missionLabel: "Mission",
         mission:
           "To ensure agricultural products are cultivated responsibly, sourced ethically, and delivered with complete trust while improving livelihoods across rural communities.",
@@ -107,7 +179,7 @@ export const siteContent = {
           },
           {
             id: "fpo-founded",
-            value: "Dec 2022",
+            value: "21 Dec 2022",
             label: "foundation period of Rupwara Marwan Fed Farmers Producer Company Limited",
           },
           {
@@ -163,6 +235,22 @@ export const siteContent = {
             caption: "Building collective platforms that strengthen farmer organization and local participation.",
           },
         ],
+      },
+      team: {
+        eyebrow: "Our team",
+        title: "A rural leadership ecosystem rooted in Muzaffarpur.",
+        description:
+          "Our board brings together grassroots experience, agricultural understanding, and a shared commitment to farmer empowerment, sustainable agriculture, transparent business practices, and rural economic development.",
+        values: [
+          "Farmer empowerment",
+          "Sustainable agriculture",
+          "Transparent business practices",
+          "Rural economic development",
+        ],
+        roleLabel: "Role",
+        locationLabel: "Location",
+        emailLabel: "Email",
+        memberRole: "Director",
       },
       productsSection: {
         eyebrow: "Products overview",
@@ -317,7 +405,7 @@ export const siteContent = {
         eyebrow: "ब्रांड और एफपीओ के बारे में",
         title: "किसानों और परिवारों के बीच एक भरोसेमंद सेतु।",
         description:
-          "बिहार के किसान समुदायों की ताकत पर आधारित, Ruwan Agro एक किसान-चालित पहल है जो टिकाऊ कृषि, बेहतर बाजार पहुँच और ईमानदारी से पहुँचाए गए उत्पादों पर केंद्रित है। इसकी मजबूत नींव रुपवाड़ा मड़वन फेड फार्मर्स प्रोड्यूसर कंपनी लिमिटेड से जुड़ी है, जो छोटे और सीमांत किसानों को सामूहिक विकास, बेहतर अवसरों और दीर्घकालिक प्रगति से सशक्त बनाती है।",
+          "बिहार के किसान समुदायों की ताकत पर आधारित, Ruwan Agro रेपुरा, मुजफ्फरपुर में जड़ें रखने वाली किसान-चालित पहल है, जो टिकाऊ कृषि, बेहतर बाजार पहुँच और ईमानदारी से पहुँचाए गए उत्पादों पर केंद्रित है। 21 दिसंबर 2022 को रूपवाड़ा मड़वन फेड फार्मर्स प्रोड्यूसर कंपनी लिमिटेड के अंतर्गत स्थापित यह पहल छोटे और सीमांत किसानों को सामूहिक विकास, बेहतर अवसरों और दीर्घकालिक प्रगति से सशक्त बनाती है।",
         missionLabel: "मिशन",
         mission:
           "कृषि उत्पादों को जिम्मेदारी से उगाना, नैतिक रूप से सोर्स करना और पूर्ण विश्वास के साथ पहुँचाना, साथ ही ग्रामीण समुदायों की आजीविका को बेहतर बनाना।",
@@ -352,7 +440,7 @@ export const siteContent = {
           },
           {
             id: "fpo-founded",
-            value: "Dec 2022",
+            value: "21 Dec 2022",
             label: "रूपवाड़ा मड़वन फेड फार्मर्स प्रोड्यूसर कंपनी लिमिटेड की स्थापना का चरण",
           },
           {
@@ -408,6 +496,22 @@ export const siteContent = {
             caption: "ऐसे सामूहिक मंचों का निर्माण जो किसानों के संगठन और स्थानीय भागीदारी को मजबूत बनाते हैं।",
           },
         ],
+      },
+      team: {
+        eyebrow: "हमारी टीम",
+        title: "मुजफ्फरपुर में जड़ों वाला ग्रामीण नेतृत्व तंत्र।",
+        description:
+          "हमारा बोर्ड जमीनी अनुभव, कृषि की गहरी समझ और किसान सशक्तिकरण, टिकाऊ कृषि, पारदर्शी व्यावसायिक प्रक्रियाओं और ग्रामीण आर्थिक विकास के साझा संकल्प को साथ लाता है।",
+        values: [
+          "किसान सशक्तिकरण",
+          "टिकाऊ कृषि",
+          "पारदर्शी व्यवसाय",
+          "ग्रामीण आर्थिक विकास",
+        ],
+        roleLabel: "भूमिका",
+        locationLabel: "स्थान",
+        emailLabel: "ईमेल",
+        memberRole: "निदेशक",
       },
       productsSection: {
         eyebrow: "उत्पाद परिचय",

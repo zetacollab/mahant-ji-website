@@ -5,6 +5,7 @@ import {
   HeroSection,
   ImpactSection,
   ProductsSection,
+  TeamSection,
   ValuesSection,
 } from "@/components/SiteSections";
 
@@ -23,6 +24,7 @@ export const HomePage = ({ copy, language }) => (
 export const AboutPage = ({ copy }) => (
   <main data-testid="about-page">
     <AboutSection copy={copy} />
+    <TeamSection copy={copy} />
     <ValuesSection copy={copy} />
   </main>
 );

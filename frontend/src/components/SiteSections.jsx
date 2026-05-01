@@ -469,6 +469,73 @@ export const ValuesSection = ({ copy }) => (
   </section>
 );
 
+export const TeamSection = ({ copy }) => (
+  <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-18 lg:px-8 lg:py-28" data-testid="team-section">
+    <div className="space-y-8">
+      <div className="space-y-4">
+        <SectionEyebrow testId="team-eyebrow">{copy.team.eyebrow}</SectionEyebrow>
+        <h2 className="max-w-3xl font-[Playfair_Display] text-3xl text-[#1A1A1A] sm:text-4xl lg:text-5xl" data-testid="team-title">
+          {copy.team.title}
+        </h2>
+        <p className="max-w-4xl text-base leading-8 text-[#4A4A4A]" data-testid="team-description">
+          {copy.team.description}
+        </p>
+      </div>
+
+      <div className="flex flex-wrap gap-3">
+        {copy.team.values.map((value, index) => (
+          <div
+            className="rounded-full border border-[#d9d2c6] bg-[#F9F8F6] px-4 py-3 text-sm text-[#1A1A1A]"
+            data-testid={`team-value-pill-${index + 1}`}
+            key={`${value}-${index}`}
+          >
+            {value}
+          </div>
+        ))}
+      </div>
+
+      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {siteContent.teamMembers.map((member) => (
+          <div
+            className="rounded-[1.75rem] border border-[#E2DFD9] bg-[#F9F8F6] p-6"
+            data-testid={`team-card-${member.id}`}
+            key={member.id}
+          >
+            <div className="space-y-2">
+              <h3 className="font-[Playfair_Display] text-2xl text-[#1A1A1A]" data-testid={`team-member-name-${member.id}`}>
+                {member.name}
+              </h3>
+              <p className="text-sm uppercase tracking-[0.18em] text-[#9E4723]" data-testid={`team-member-role-${member.id}`}>
+                {copy.team.memberRole}
+              </p>
+            </div>
+
+            <div className="mt-5 space-y-4">
+              <div data-testid={`team-member-location-block-${member.id}`}>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4A4A4A]">{copy.team.locationLabel}</p>
+                <p className="mt-1 text-sm leading-7 text-[#1A1A1A]" data-testid={`team-member-location-${member.id}`}>
+                  {member.location}
+                </p>
+              </div>
+
+              <div data-testid={`team-member-email-block-${member.id}`}>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4A4A4A]">{copy.team.emailLabel}</p>
+                <a
+                  className="mt-1 block break-all text-sm leading-7 text-[#2C402E] underline-offset-4 hover:underline"
+                  data-testid={`team-member-email-${member.id}`}
+                  href={`mailto:${member.email}`}
+                >
+                  {member.email}
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 export const ContactSection = ({ copy }) => {
   const contactItems = [
     {
