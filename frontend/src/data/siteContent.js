@@ -43,11 +43,11 @@ export const siteContent = {
   copy: {
     en: {
       navigation: [
-        { label: "About", href: "#about" },
-        { label: "Founder", href: "#founder" },
-        { label: "Products", href: "#products" },
-        { label: "Impact", href: "#impact" },
-        { label: "Contact", href: "#contact" },
+        { label: "About", path: "/about" },
+        { label: "Founder", path: "/founder" },
+        { label: "Products", path: "/products" },
+        { label: "Impact", path: "/impact" },
+        { label: "Contact", path: "/contact" },
       ],
       headerCta: "Reach us",
       hero: {
@@ -288,11 +288,11 @@ export const siteContent = {
     },
     hi: {
       navigation: [
-        { label: "परिचय", href: "#about" },
-        { label: "संस्थापक", href: "#founder" },
-        { label: "उत्पाद", href: "#products" },
-        { label: "प्रभाव", href: "#impact" },
-        { label: "संपर्क", href: "#contact" },
+        { label: "परिचय", path: "/about" },
+        { label: "संस्थापक", path: "/founder" },
+        { label: "उत्पाद", path: "/products" },
+        { label: "प्रभाव", path: "/impact" },
+        { label: "संपर्क", path: "/contact" },
       ],
       headerCta: "संपर्क करें",
       hero: {
