@@ -74,7 +74,7 @@ export const ContactForm = ({ content }) => {
 
       <div className="grid gap-4 md:grid-cols-2">
         <Input
-          aria-label="Your name"
+          aria-label={content.placeholders.name}
           className="h-12 rounded-full border-[#d9d2c6] px-5"
           data-testid="contact-name-input"
           name="name"
@@ -84,7 +84,7 @@ export const ContactForm = ({ content }) => {
           value={form.name}
         />
         <Input
-          aria-label="Your email"
+          aria-label={content.placeholders.email}
           className="h-12 rounded-full border-[#d9d2c6] px-5"
           data-testid="contact-email-input"
           name="email"
@@ -97,7 +97,7 @@ export const ContactForm = ({ content }) => {
       </div>
 
       <Input
-        aria-label="Your phone number"
+        aria-label={content.placeholders.phone}
         className="h-12 rounded-full border-[#d9d2c6] px-5"
         data-testid="contact-phone-input"
         name="phone"
@@ -108,7 +108,7 @@ export const ContactForm = ({ content }) => {
       />
 
       <Textarea
-        aria-label="Your message"
+        aria-label={content.placeholders.message}
         className="min-h-[140px] rounded-[1.5rem] border-[#d9d2c6] px-5 py-4"
         data-testid="contact-message-input"
         name="message"
