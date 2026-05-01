@@ -79,3 +79,33 @@ def test_create_inquiry_invalid_email_rejected(api_client):
     assert response.status_code == 422
     data = response.json()
     assert "detail" in data
+
+
+def test_create_status_check_success(api_client):
+    """Module: Status creation endpoint contract validation."""
+    payload = {"client_name": "TEST status-client"}
+
+    response = api_client.post(f"{BASE_URL}/api/status", json=payload)
+
+    assert response.status_code == 200
+    data = response.json()
+    assert data["client_name"] == payload["client_name"]
+    assert "id" in data and isinstance(data["id"], str) and len(data["id"]) > 0
+    assert "timestamp" in data and isinstance(data["timestamp"], str)
+
+
+def test_get_status_checks_contains_created_record(api_client):
+    """Module: Status list endpoint returns previously persisted records."""
+    create_payload = {"client_name": "TEST list-verification"}
+    create_response = api_client.post(f"{BASE_URL}/api/status", json=create_payload)
+    assert create_response.status_code == 200
+    created = create_response.json()
+
+    list_response = api_client.get(f"{BASE_URL}/api/status")
+    assert list_response.status_code == 200
+    items = list_response.json()
+
+    assert isinstance(items, list)
+    matching = [item for item in items if item.get("id") == created["id"]]
+    assert len(matching) == 1
+    assert matching[0]["client_name"] == create_payload["client_name"]

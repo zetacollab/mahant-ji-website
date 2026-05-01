@@ -1,109 +1,13 @@
 export const siteContent = {
   brand: {
     name: "Ruwan Agro",
-    supportingName: "Backed by Rupwara Marwan Fed Farmers Producer Company Limited",
-    location: "Rupwara, Muzaffarpur, Bihar",
+    location: {
+      en: "Rupwara, Muzaffarpur, Bihar",
+      hi: "रूपवाड़ा, मुजफ्फरपुर, बिहार",
+    },
     website: "ruwanagro.com",
     logo: "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/c422mrxs_WhatsApp%20Image%202026-05-01%20at%2018.45.23.jpeg",
   },
-  hero: {
-    eyebrow: "Farmer-first agro brand",
-    title: "Direct from Farmers. Naturally Grown. Honestly Delivered.",
-    subtitle:
-      "Ruwan Agro Products brings naturally grown produce, transparent sourcing, and a strong farmer network together to deliver food with trust, purity, and purpose.",
-    primaryCta: "Explore our products",
-    secondaryCta: "Contact us",
-    image:
-      "https://images.unsplash.com/photo-1764277434161-23d72931335f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwyfHxhZ3JpY3VsdHVyZSUyMGxhbmRzY2FwZSUyMGZhcm0lMjBzdW5zZXR8ZW58MHx8fHwxNzc0ODk0ODA2fDA&ixlib=rb-4.1.0&q=85",
-  },
-  about: {
-    title: "A trusted bridge between farmers and families.",
-    description:
-      "Built on the strength of Bihar’s farming communities, Ruwan Agro Products is a farmer-driven initiative focused on sustainability, fair market access, and honestly delivered food. Our roots are closely linked with the mission of Rupwara Marwan Fed Farmers Producer Company Limited, which supports small and marginal farmers with better opportunities, modern agricultural guidance, and collective growth.",
-    mission:
-      "To ensure agricultural products are cultivated responsibly, sourced ethically, and delivered with complete trust while improving livelihoods across rural communities.",
-    vision:
-      "To build a sustainable agricultural ecosystem where farmers thrive, consumers trust, and nature is preserved.",
-    farmerImage:
-      "https://images.pexels.com/photos/18620451/pexels-photo-18620451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    fieldImage:
-      "https://images.pexels.com/photos/29912210/pexels-photo-29912210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-  },
-  products: [
-    {
-      id: "grains-cereals",
-      title: "Grains & Cereals",
-      description:
-        "Carefully cultivated staples that retain their natural goodness, freshness, and consistent quality.",
-      image:
-        "https://images.pexels.com/photos/1393382/pexels-photo-1393382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    },
-    {
-      id: "natural-agro-products",
-      title: "Natural Agro Products",
-      description:
-        "Farm-sourced products with minimal processing and a strong focus on purity, traceability, and trust.",
-      image:
-        "https://images.unsplash.com/photo-1706793990285-b2a7d9aaf17d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHw0fHxmcmVzaCUyMG9yZ2FuaWMlMjBncmFpbnMlMjBzcGljZXMlMjBtYXJrZXR8ZW58MHx8fHwxNzc0ODk0Nzg2fDA&ixlib=rb-4.1.0&q=85",
-    },
-    {
-      id: "value-added-products",
-      title: "Value-Added Products",
-      description:
-        "Convenient, thoughtfully processed offerings designed for better usability, nutrition, and everyday cooking.",
-      image:
-        "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=80",
-    },
-  ],
-  stats: [
-    {
-      id: "farmers-network",
-      value: "5000+",
-      label: "farmers in the growing network",
-    },
-    {
-      id: "location-reach",
-      value: "01",
-      label: "rooted base in Muzaffarpur, Bihar",
-    },
-    {
-      id: "value-chain",
-      value: "360°",
-      label: "support across sourcing, quality, packaging, and delivery",
-    },
-  ],
-  values: [
-    {
-      id: "direct-sourcing",
-      title: "Direct from farmers",
-      description:
-        "We reduce unnecessary intermediaries so producers gain fairer prices and families receive fresher products.",
-    },
-    {
-      id: "natural-farming",
-      title: "Naturally grown",
-      description:
-        "Our ecosystem encourages eco-friendly practices that protect soil health, reduce chemical dependency, and support future generations.",
-    },
-    {
-      id: "quality-assurance",
-      title: "Quality assured",
-      description:
-        "From farm-level monitoring to organized procurement and hygienic packaging, quality is built into every step.",
-    },
-    {
-      id: "transparent-trust",
-      title: "Transparent practices",
-      description:
-        "We believe in honest product representation, clear communication, and an agricultural model people can trust.",
-    },
-  ],
-  impact: [
-    "Fair prices for farmers",
-    "Fresh and natural products for consumers",
-    "Support for sustainable agriculture",
-    "Stronger rural communities",
-  ],
   contact: {
     address: "Rupwara, Muzaffarpur, Bihar, India",
     email: "ruwanagro26@gmail.com",
@@ -111,6 +15,352 @@ export const siteContent = {
     farmerSupport: ["9304777460", "9661361212"],
     website: "https://ruwanagro.com",
   },
-  marquee:
-    "EMPOWERING BIHAR FARMERS • NATURALLY GROWN • HONESTLY DELIVERED • DIRECT FROM SOURCE • ",
+  media: {
+    hero:
+      "https://images.unsplash.com/photo-1764277434161-23d72931335f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwyfHxhZ3JpY3VsdHVyZSUyMGxhbmRzY2FwZSUyMGZhcm0lMjBzdW5zZXR8ZW58MHx8fHwxNzc0ODk0ODA2fDA&ixlib=rb-4.1.0&q=85",
+    aboutFarmer:
+      "https://images.pexels.com/photos/18620451/pexels-photo-18620451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    aboutField:
+      "https://images.pexels.com/photos/29912210/pexels-photo-29912210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    productGrains:
+      "https://images.pexels.com/photos/1393382/pexels-photo-1393382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    productNatural:
+      "https://images.unsplash.com/photo-1706793990285-b2a7d9aaf17d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHw0fHxmcmVzaCUyMG9yZ2FuaWMlMjBncmFpbnMlMjBzcGljZXMlMjBtYXJrZXR8ZW58MHx8fHwxNzc0ODk0Nzg2fDA&ixlib=rb-4.1.0&q=85",
+    productValueAdded:
+      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=80",
+    sustainability:
+      "https://images.pexels.com/photos/33786776/pexels-photo-33786776.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  },
+  copy: {
+    en: {
+      navigation: [
+        { label: "About", href: "#about" },
+        { label: "Products", href: "#products" },
+        { label: "Impact", href: "#impact" },
+        { label: "Contact", href: "#contact" },
+      ],
+      headerCta: "Reach us",
+      hero: {
+        eyebrow: "Farmer-first agro brand",
+        title: "Direct from Farmers. Naturally Grown. Honestly Delivered.",
+        subtitle:
+          "Ruwan Agro brings naturally grown produce, transparent sourcing, and a strong farmer network together to deliver food with trust, purity, and purpose.",
+        primaryCta: "Explore our products",
+        secondaryCta: "Contact us",
+        highlightLabel: "Rooted in rural India",
+        highlightTitle: "Trusted produce from field to family.",
+        highlightText:
+          "A farmer-driven brand connecting reliable produce, responsible sourcing, and modern market access.",
+        impactPills: [
+          "Fair prices for farmers",
+          "Fresh and natural products for consumers",
+          "Support for sustainable agriculture",
+          "Stronger rural communities",
+        ],
+      },
+      about: {
+        eyebrow: "About brand & FPO",
+        title: "A trusted bridge between farmers and families.",
+        description:
+          "Built on the strength of Bihar’s farming communities, Ruwan Agro is a farmer-driven initiative focused on sustainability, fair market access, and honestly delivered food. Its foundation is closely linked with Rupwara Marwan Fed Farmers Producer Company Limited, which supports small and marginal farmers through collective development, better opportunities, and long-term growth.",
+        missionLabel: "Mission",
+        mission:
+          "To ensure agricultural products are cultivated responsibly, sourced ethically, and delivered with complete trust while improving livelihoods across rural communities.",
+        visionLabel: "Vision",
+        vision:
+          "To build a sustainable agricultural ecosystem where farmers thrive, consumers trust, and nature is preserved.",
+        supportingLabel: "Supporting foundation",
+        supportingTitle:
+          "Backed by Rupwara Marwan Fed Farmers Producer Company Limited",
+        supportingDescription:
+          "The farmer producer organization strengthens small and marginal farmers through collective development, market access, packaging support, financial awareness, and sustainable agriculture practices.",
+      },
+      productsSection: {
+        eyebrow: "Products overview",
+        title: "Purity in every category.",
+        description:
+          "Our products reflect careful cultivation, responsible sourcing, and practical value for homes, retailers, and food partners.",
+      },
+      products: [
+        {
+          id: "grains-cereals",
+          title: "Grains & Cereals",
+          description:
+            "Carefully cultivated staples that retain their natural goodness, freshness, and consistent quality.",
+        },
+        {
+          id: "natural-agro-products",
+          title: "Natural Agro Products",
+          description:
+            "Farm-sourced products with minimal processing and a strong focus on purity, traceability, and trust.",
+        },
+        {
+          id: "value-added-products",
+          title: "Value-Added Products",
+          description:
+            "Convenient, thoughtfully processed offerings designed for better usability, nutrition, and everyday cooking.",
+        },
+      ],
+      impactSection: {
+        eyebrow: "Farmer network impact",
+        title: "Growing value across the agricultural chain.",
+        description:
+          "Every purchase supports better market access, stronger rural livelihoods, and a more sustainable food system.",
+        marquee:
+          "EMPOWERING BIHAR FARMERS • NATURALLY GROWN • HONESTLY DELIVERED • DIRECT FROM SOURCE • ",
+        stats: [
+          {
+            id: "farmers-network",
+            value: "5000+",
+            label: "farmers in the growing network",
+          },
+          {
+            id: "location-reach",
+            value: "01",
+            label: "rooted base in Muzaffarpur, Bihar",
+          },
+          {
+            id: "value-chain",
+            value: "360°",
+            label: "support across sourcing, quality, packaging, and delivery",
+          },
+        ],
+      },
+      valuesSection: {
+        eyebrow: "Sustainability & trust",
+        title: "Why customers and farming communities choose us.",
+        description:
+          "We bring together responsible farming, transparent operations, and dependable quality so that producers and buyers both benefit.",
+        values: [
+          {
+            id: "direct-sourcing",
+            title: "Direct from farmers",
+            description:
+              "We reduce unnecessary intermediaries so producers gain fairer prices and families receive fresher products.",
+          },
+          {
+            id: "natural-farming",
+            title: "Naturally grown",
+            description:
+              "Our ecosystem encourages eco-friendly practices that protect soil health, reduce chemical dependency, and support future generations.",
+          },
+          {
+            id: "quality-assurance",
+            title: "Quality assured",
+            description:
+              "From farm-level monitoring to organized procurement and hygienic packaging, quality is built into every step.",
+          },
+          {
+            id: "transparent-trust",
+            title: "Transparent practices",
+            description:
+              "We believe in honest product representation, clear communication, and an agricultural model people can trust.",
+          },
+        ],
+        coreValuesLabel: "Core values",
+        coreValues: ["Integrity", "Commitment", "Sustainability", "Collaboration"],
+      },
+      contactSection: {
+        eyebrow: "Contact & partnerships",
+        title: "Let’s grow something meaningful together.",
+        description:
+          "Reach out for product inquiries, distribution opportunities, sourcing partnerships, or farmer network collaboration.",
+        labels: {
+          address: "Visit us",
+          phone: "Call us",
+          email: "Email us",
+          website: "Website",
+        },
+        farmerSupportLabel: "Farmer support lines",
+      },
+      contactForm: {
+        eyebrow: "Start a conversation",
+        title: "Tell us what you need.",
+        placeholders: {
+          name: "Your name",
+          email: "Your email",
+          phone: "Phone number",
+          message: "Share your requirement, inquiry, or partnership idea",
+        },
+        note:
+          "Prefer a direct reply? Leave your phone number and we’ll get back to you.",
+        submit: "Send inquiry",
+        sending: "Sending...",
+        successToast:
+          "Thanks for reaching out. Our team will contact you soon.",
+        errorToast:
+          "We couldn’t send your message right now. Please try again.",
+      },
+      footer: {
+        tagline: "Choose better. Support farmers. Live healthier.",
+        supportingText:
+          "Backed by Rupwara Marwan Fed Farmers Producer Company Limited",
+      },
+    },
+    hi: {
+      navigation: [
+        { label: "परिचय", href: "#about" },
+        { label: "उत्पाद", href: "#products" },
+        { label: "प्रभाव", href: "#impact" },
+        { label: "संपर्क", href: "#contact" },
+      ],
+      headerCta: "संपर्क करें",
+      hero: {
+        eyebrow: "किसान-प्रथम एग्रो ब्रांड",
+        title: "किसानों से सीधे। प्राकृतिक रूप से उगाया गया। ईमानदारी से पहुँचाया गया।",
+        subtitle:
+          "Ruwan Agro किसानों की उपज, पारदर्शी सोर्सिंग और मजबूत किसान नेटवर्क को साथ लाकर भरोसेमंद, शुद्ध और उद्देश्यपूर्ण खाद्य उत्पाद पहुँचाता है।",
+        primaryCta: "हमारे उत्पाद देखें",
+        secondaryCta: "संपर्क करें",
+        highlightLabel: "ग्रामीण भारत से जुड़ा",
+        highlightTitle: "खेत से परिवार तक भरोसेमंद उत्पाद।",
+        highlightText:
+          "यह एक किसान-चालित ब्रांड है जो विश्वसनीय उत्पाद, जिम्मेदार सोर्सिंग और आधुनिक बाजार पहुँच को जोड़ता है।",
+        impactPills: [
+          "किसानों को उचित मूल्य",
+          "ग्राहकों के लिए ताज़ा और प्राकृतिक उत्पाद",
+          "टिकाऊ कृषि का समर्थन",
+          "मजबूत ग्रामीण समुदाय",
+        ],
+      },
+      about: {
+        eyebrow: "ब्रांड और एफपीओ के बारे में",
+        title: "किसानों और परिवारों के बीच एक भरोसेमंद सेतु।",
+        description:
+          "बिहार के किसान समुदायों की ताकत पर आधारित, Ruwan Agro एक किसान-चालित पहल है जो टिकाऊ कृषि, बेहतर बाजार पहुँच और ईमानदारी से पहुँचाए गए उत्पादों पर केंद्रित है। इसकी मजबूत नींव रुपवाड़ा मड़वन फेड फार्मर्स प्रोड्यूसर कंपनी लिमिटेड से जुड़ी है, जो छोटे और सीमांत किसानों को सामूहिक विकास, बेहतर अवसरों और दीर्घकालिक प्रगति से सशक्त बनाती है।",
+        missionLabel: "मिशन",
+        mission:
+          "कृषि उत्पादों को जिम्मेदारी से उगाना, नैतिक रूप से सोर्स करना और पूर्ण विश्वास के साथ पहुँचाना, साथ ही ग्रामीण समुदायों की आजीविका को बेहतर बनाना।",
+        visionLabel: "विज़न",
+        vision:
+          "ऐसा टिकाऊ कृषि पारिस्थितिकी तंत्र बनाना जहाँ किसान समृद्ध हों, उपभोक्ता भरोसा करें और प्रकृति सुरक्षित रहे।",
+        supportingLabel: "सहयोगी आधार",
+        supportingTitle:
+          "रूपवाड़ा मड़वन फेड फार्मर्स प्रोड्यूसर कंपनी लिमिटेड द्वारा समर्थित",
+        supportingDescription:
+          "यह किसान उत्पादक संगठन छोटे और सीमांत किसानों को सामूहिक विकास, बाजार पहुँच, पैकेजिंग सहायता, वित्तीय जागरूकता और टिकाऊ कृषि पद्धतियों के माध्यम से सशक्त बनाता है।",
+      },
+      productsSection: {
+        eyebrow: "उत्पाद परिचय",
+        title: "हर श्रेणी में शुद्धता।",
+        description:
+          "हमारे उत्पाद सावधानीपूर्वक खेती, जिम्मेदार सोर्सिंग और घरों, रिटेलर्स तथा व्यापारिक साझेदारों के लिए उपयोगी मूल्य को दर्शाते हैं।",
+      },
+      products: [
+        {
+          id: "grains-cereals",
+          title: "अनाज और सीरियल",
+          description:
+            "सावधानी से उगाए गए मुख्य खाद्य उत्पाद जो अपनी प्राकृतिक गुणवत्ता, ताजगी और स्थिरता बनाए रखते हैं।",
+        },
+        {
+          id: "natural-agro-products",
+          title: "प्राकृतिक एग्रो उत्पाद",
+          description:
+            "खेतों से सीधे प्राप्त उत्पाद जिनमें न्यूनतम प्रोसेसिंग होती है और शुद्धता, ट्रेसेबिलिटी तथा भरोसे पर जोर दिया जाता है।",
+        },
+        {
+          id: "value-added-products",
+          title: "वैल्यू-ऐडेड उत्पाद",
+          description:
+            "दैनिक उपयोग, बेहतर पोषण और सुविधाजनक रसोई अनुभव के लिए सोच-समझकर तैयार किए गए उत्पाद।",
+        },
+      ],
+      impactSection: {
+        eyebrow: "किसान नेटवर्क का प्रभाव",
+        title: "कृषि श्रृंखला के हर चरण में मूल्य वृद्धि।",
+        description:
+          "हर खरीद बेहतर बाजार पहुँच, मजबूत ग्रामीण आजीविका और अधिक टिकाऊ खाद्य व्यवस्था को समर्थन देती है।",
+        marquee:
+          "बिहार के किसानों को सशक्त बनाते हुए • प्राकृतिक रूप से उगाया गया • ईमानदारी से पहुँचाया गया • सीधे स्रोत से • ",
+        stats: [
+          {
+            id: "farmers-network",
+            value: "5000+",
+            label: "किसानों का बढ़ता नेटवर्क",
+          },
+          {
+            id: "location-reach",
+            value: "01",
+            label: "मुजफ्फरपुर, बिहार में मजबूत आधार",
+          },
+          {
+            id: "value-chain",
+            value: "360°",
+            label: "सोर्सिंग, गुणवत्ता, पैकेजिंग और डिलीवरी तक सहयोग",
+          },
+        ],
+      },
+      valuesSection: {
+        eyebrow: "सततता और भरोसा",
+        title: "ग्राहक और किसान समुदाय हमें क्यों चुनते हैं।",
+        description:
+          "हम जिम्मेदार खेती, पारदर्शी संचालन और भरोसेमंद गुणवत्ता को साथ लाते हैं, ताकि उत्पादक और खरीदार दोनों लाभान्वित हों।",
+        values: [
+          {
+            id: "direct-sourcing",
+            title: "किसानों से सीधे",
+            description:
+              "हम अनावश्यक बिचौलियों को कम करते हैं ताकि किसानों को बेहतर मूल्य मिले और परिवारों को ताज़े उत्पाद प्राप्त हों।",
+          },
+          {
+            id: "natural-farming",
+            title: "प्राकृतिक खेती",
+            description:
+              "हमारा तंत्र पर्यावरण-अनुकूल खेती को बढ़ावा देता है, जो मिट्टी की सेहत, कम रसायन उपयोग और आने वाली पीढ़ियों की सुरक्षा में मदद करता है।",
+          },
+          {
+            id: "quality-assurance",
+            title: "गुणवत्ता की गारंटी",
+            description:
+              "फार्म-स्तर निगरानी से लेकर सुव्यवस्थित खरीद और स्वच्छ पैकेजिंग तक, हर चरण में गुणवत्ता सुनिश्चित की जाती है।",
+          },
+          {
+            id: "transparent-trust",
+            title: "पारदर्शी प्रक्रियाएँ",
+            description:
+              "हम ईमानदार उत्पाद प्रस्तुति, स्पष्ट संवाद और भरोसेमंद कृषि मॉडल में विश्वास करते हैं।",
+          },
+        ],
+        coreValuesLabel: "मुख्य मूल्य",
+        coreValues: ["ईमानदारी", "प्रतिबद्धता", "सततता", "सहयोग"],
+      },
+      contactSection: {
+        eyebrow: "संपर्क और साझेदारी",
+        title: "आइए, साथ मिलकर कुछ सार्थक बढ़ाएँ।",
+        description:
+          "उत्पाद संबंधी जानकारी, वितरण अवसरों, सोर्सिंग साझेदारी या किसान नेटवर्क सहयोग के लिए हमसे संपर्क करें।",
+        labels: {
+          address: "हमसे मिलें",
+          phone: "कॉल करें",
+          email: "ईमेल करें",
+          website: "वेबसाइट",
+        },
+        farmerSupportLabel: "किसान सहायता नंबर",
+      },
+      contactForm: {
+        eyebrow: "बातचीत शुरू करें",
+        title: "अपनी आवश्यकता हमें बताइए।",
+        placeholders: {
+          name: "आपका नाम",
+          email: "आपका ईमेल",
+          phone: "फोन नंबर",
+          message: "अपनी आवश्यकता, पूछताछ या साझेदारी का विचार लिखें",
+        },
+        note:
+          "यदि आप सीधे जवाब चाहते हैं, तो अपना फोन नंबर छोड़ें और हम आपसे संपर्क करेंगे।",
+        submit: "पूछताछ भेजें",
+        sending: "भेजा जा रहा है...",
+        successToast:
+          "संपर्क करने के लिए धन्यवाद। हमारी टीम जल्द ही आपसे संपर्क करेगी।",
+        errorToast:
+          "अभी आपका संदेश नहीं भेजा जा सका। कृपया फिर से प्रयास करें।",
+      },
+      footer: {
+        tagline: "बेहतर चुनें। किसानों का साथ दें। स्वस्थ जीवन अपनाएँ।",
+        supportingText:
+          "रूपवाड़ा मड़वन फेड फार्मर्स प्रोड्यूसर कंपनी लिमिटेड द्वारा समर्थित",
+      },
+    },
+  },
 };

@@ -1,3 +1,7 @@
+import { useState } from "react";
+
+import "@/App.css";
+
 import {
   ArrowRight,
   CircleDollarSign,
@@ -19,14 +23,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Toaster } from "@/components/ui/sonner";
 import { siteContent } from "@/data/siteContent";
-import "@/App.css";
-
-const navigationItems = [
-  { label: "About", href: "#about" },
-  { label: "Products", href: "#products" },
-  { label: "Impact", href: "#impact" },
-  { label: "Contact", href: "#contact" },
-];
 
 const featureIcons = {
   "direct-sourcing": Handshake,
@@ -35,38 +31,20 @@ const featureIcons = {
   "transparent-trust": PackageCheck,
 };
 
+const productImages = {
+  "grains-cereals": siteContent.media.productGrains,
+  "natural-agro-products": siteContent.media.productNatural,
+  "value-added-products": siteContent.media.productValueAdded,
+};
+
 const impactIcons = [Users, CircleDollarSign, Globe];
 
-const contactItems = [
-  {
-    id: "address",
-    label: "Visit us",
-    value: siteContent.contact.address,
-    href: "https://maps.google.com/?q=Repura,+Muzaffarpur,+Bihar+843113",
-    Icon: MapPin,
-  },
-  {
-    id: "phone",
-    label: "Call us",
-    value: siteContent.contact.phone,
-    href: `tel:${siteContent.contact.phone.replace(/\s+/g, "")}`,
-    Icon: Phone,
-  },
-  {
-    id: "email",
-    label: "Email us",
-    value: siteContent.contact.email,
-    href: `mailto:${siteContent.contact.email}`,
-    Icon: Mail,
-  },
-  {
-    id: "website",
-    label: "Website",
-    value: siteContent.brand.website,
-    href: siteContent.contact.website,
-    Icon: Globe,
-  },
-];
+const languageButtonClass = (active) =>
+  `rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.14em] transition duration-300 ${
+    active
+      ? "bg-[#2C402E] text-[#F9F8F6]"
+      : "bg-transparent text-[#1A1A1A] hover:bg-[#EFECE7]"
+  }`;
 
 const SectionEyebrow = ({ children, testId }) => (
   <p
@@ -87,7 +65,7 @@ const ProductCard = ({ product }) => (
         alt={product.title}
         className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
         data-testid={`product-image-${product.id}`}
-        src={product.image}
+        src={productImages[product.id]}
       />
     </div>
     <CardContent className="space-y-4 p-6">
@@ -165,6 +143,40 @@ const ContactItem = ({ item }) => (
 );
 
 function App() {
+  const [language, setLanguage] = useState("en");
+  const copy = siteContent.copy[language];
+
+  const contactItems = [
+    {
+      id: "address",
+      label: copy.contactSection.labels.address,
+      value: siteContent.contact.address,
+      href: "https://maps.google.com/?q=Rupwara,+Muzaffarpur,+Bihar,+India",
+      Icon: MapPin,
+    },
+    {
+      id: "phone",
+      label: copy.contactSection.labels.phone,
+      value: siteContent.contact.phone,
+      href: `tel:${siteContent.contact.phone.replace(/\s+/g, "")}`,
+      Icon: Phone,
+    },
+    {
+      id: "email",
+      label: copy.contactSection.labels.email,
+      value: siteContent.contact.email,
+      href: `mailto:${siteContent.contact.email}`,
+      Icon: Mail,
+    },
+    {
+      id: "website",
+      label: copy.contactSection.labels.website,
+      value: siteContent.brand.website,
+      href: siteContent.contact.website,
+      Icon: Globe,
+    },
+  ];
+
   return (
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
       <div className="min-h-screen bg-[var(--page-bg)] text-[#1A1A1A]">
@@ -197,31 +209,55 @@ function App() {
                   className="text-xs uppercase tracking-[0.18em] text-[#4A4A4A]"
                   data-testid="brand-location"
                 >
-                  {siteContent.brand.location}
+                  {siteContent.brand.location[language]}
                 </p>
               </div>
             </a>
 
             <nav className="hidden items-center gap-8 md:flex" data-testid="site-navigation">
-              {navigationItems.map((item) => (
+              {copy.navigation.map((item, index) => (
                 <a
                   className="text-sm font-semibold tracking-wide text-[#1A1A1A] transition duration-300 hover:text-[#9E4723]"
-                  data-testid={`nav-link-${item.label.toLowerCase()}`}
+                  data-testid={`nav-link-${index + 1}`}
                   href={item.href}
-                  key={item.label}
+                  key={`${language}-${item.label}`}
                 >
                   {item.label}
                 </a>
               ))}
             </nav>
 
-            <Button
-              asChild
-              className="hidden rounded-full bg-[#2C402E] px-6 text-[#F9F8F6] hover:bg-[#1f2d20] sm:inline-flex"
-              data-testid="header-contact-button"
-            >
-              <a href="#contact">Reach us</a>
-            </Button>
+            <div className="flex items-center gap-3">
+              <div
+                className="flex items-center gap-1 rounded-full border border-[#d9d2c6] bg-white p-1"
+                data-testid="language-toggle-group"
+              >
+                <button
+                  className={languageButtonClass(language === "en")}
+                  data-testid="language-toggle-en"
+                  onClick={() => setLanguage("en")}
+                  type="button"
+                >
+                  EN
+                </button>
+                <button
+                  className={languageButtonClass(language === "hi")}
+                  data-testid="language-toggle-hi"
+                  onClick={() => setLanguage("hi")}
+                  type="button"
+                >
+                  हिं
+                </button>
+              </div>
+
+              <Button
+                asChild
+                className="hidden rounded-full bg-[#2C402E] px-6 text-[#F9F8F6] hover:bg-[#1f2d20] sm:inline-flex"
+                data-testid="header-contact-button"
+              >
+                <a href="#contact">{copy.headerCta}</a>
+              </Button>
+            </div>
           </div>
         </header>
 
@@ -235,7 +271,7 @@ function App() {
                 alt="Agricultural landscape"
                 className="h-full w-full object-cover"
                 data-testid="hero-background-image"
-                src={siteContent.hero.image}
+                src={siteContent.media.hero}
               />
               <div className="absolute inset-0 bg-black/40" />
               <div className="hero-glow absolute left-[-8rem] top-10 h-64 w-64 rounded-full bg-[#d4a373]/35 blur-3xl" />
@@ -244,18 +280,18 @@ function App() {
 
             <div className="relative mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
               <div className="section-reveal max-w-3xl space-y-8 text-white">
-                <SectionEyebrow testId="hero-eyebrow">{siteContent.hero.eyebrow}</SectionEyebrow>
+                <SectionEyebrow testId="hero-eyebrow">{copy.hero.eyebrow}</SectionEyebrow>
                 <h1
                   className="max-w-4xl font-[Playfair_Display] text-4xl tracking-tight sm:text-5xl lg:text-6xl"
                   data-testid="hero-title"
                 >
-                  {siteContent.hero.title}
+                  {copy.hero.title}
                 </h1>
                 <p
                   className="max-w-2xl text-sm leading-8 text-white/90 sm:text-base lg:text-lg"
                   data-testid="hero-subtitle"
                 >
-                  {siteContent.hero.subtitle}
+                  {copy.hero.subtitle}
                 </p>
 
                 <div className="flex flex-wrap gap-4">
@@ -265,7 +301,7 @@ function App() {
                     data-testid="hero-primary-button"
                   >
                     <a href="#products">
-                      {siteContent.hero.primaryCta}
+                      {copy.hero.primaryCta}
                       <ArrowRight className="h-4 w-4" />
                     </a>
                   </Button>
@@ -275,16 +311,16 @@ function App() {
                     data-testid="hero-secondary-button"
                     variant="outline"
                   >
-                    <a href="#contact">{siteContent.hero.secondaryCta}</a>
+                    <a href="#contact">{copy.hero.secondaryCta}</a>
                   </Button>
                 </div>
 
                 <div className="flex flex-wrap gap-3">
-                  {siteContent.impact.map((item, index) => (
+                  {copy.hero.impactPills.map((item, index) => (
                     <div
                       className="rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-sm"
                       data-testid={`hero-impact-pill-${index + 1}`}
-                      key={item}
+                      key={`${language}-${item}`}
                     >
                       {item}
                     </div>
@@ -303,9 +339,12 @@ function App() {
                         className="text-xs font-bold uppercase tracking-[0.2em] text-white/70"
                         data-testid="hero-highlight-label"
                       >
-                        Rooted in rural India
+                        {copy.hero.highlightLabel}
                       </p>
-                      <div className="mb-4 flex w-fit items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 backdrop-blur-sm" data-testid="hero-brand-chip">
+                      <div
+                        className="mb-4 flex w-fit items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 backdrop-blur-sm"
+                        data-testid="hero-brand-chip"
+                      >
                         <div className="h-10 w-10 overflow-hidden rounded-full bg-white p-1.5">
                           <img
                             alt="Ruwan Agro logo"
@@ -314,7 +353,10 @@ function App() {
                             src={siteContent.brand.logo}
                           />
                         </div>
-                        <span className="text-sm font-semibold tracking-[0.12em] text-white/90" data-testid="hero-brand-chip-name">
+                        <span
+                          className="text-sm font-semibold tracking-[0.12em] text-white/90"
+                          data-testid="hero-brand-chip-name"
+                        >
                           {siteContent.brand.name}
                         </span>
                       </div>
@@ -322,18 +364,18 @@ function App() {
                         className="font-[Playfair_Display] text-3xl"
                         data-testid="hero-highlight-title"
                       >
-                        Naturally grown. Honestly delivered.
+                        {copy.hero.highlightTitle}
                       </h2>
                     </div>
                     <p className="text-sm leading-7 text-white/85" data-testid="hero-highlight-text">
-                      A farmer-driven brand connecting trusted produce, responsible sourcing, and modern market access.
+                      {copy.hero.highlightText}
                     </p>
                     <div className="grid gap-4 sm:grid-cols-3">
-                      {siteContent.stats.map((stat) => (
+                      {copy.impactSection.stats.map((stat) => (
                         <div
                           className="rounded-[1.5rem] border border-white/15 bg-black/10 p-4"
                           data-testid={`hero-stat-card-${stat.id}`}
-                          key={stat.id}
+                          key={`${language}-${stat.id}`}
                         >
                           <p className="text-2xl font-semibold" data-testid={`hero-stat-value-${stat.id}`}>
                             {stat.value}
@@ -363,7 +405,7 @@ function App() {
                       alt="Farmer community"
                       className="aspect-[4/5] h-full w-full object-cover"
                       data-testid="about-farmer-image"
-                      src={siteContent.about.farmerImage}
+                      src={siteContent.media.aboutFarmer}
                     />
                   </div>
                   <div className="overflow-hidden rounded-[2rem] border border-[#E2DFD9] bg-[#efece7]">
@@ -371,7 +413,7 @@ function App() {
                       alt="Agricultural field"
                       className="aspect-[4/3] h-full w-full object-cover"
                       data-testid="about-field-image"
-                      src={siteContent.about.fieldImage}
+                      src={siteContent.media.aboutField}
                     />
                   </div>
                 </div>
@@ -379,33 +421,33 @@ function App() {
 
               <div className="lg:col-span-7 lg:pl-8">
                 <div className="section-reveal space-y-8">
-                  <SectionEyebrow testId="about-eyebrow">About brand & FPO</SectionEyebrow>
+                  <SectionEyebrow testId="about-eyebrow">{copy.about.eyebrow}</SectionEyebrow>
                   <div className="space-y-4">
                     <h2
                       className="max-w-3xl font-[Playfair_Display] text-4xl text-[#1A1A1A] sm:text-5xl"
                       data-testid="about-title"
                     >
-                      {siteContent.about.title}
+                      {copy.about.title}
                     </h2>
                     <p className="max-w-3xl text-base leading-8 text-[#4A4A4A]" data-testid="about-description">
-                      {siteContent.about.description}
+                      {copy.about.description}
                     </p>
                   </div>
 
                   <div className="grid gap-6 md:grid-cols-2">
                     <Card className="rounded-[2rem] border border-[#E2DFD9] bg-[#F9F8F6] shadow-none" data-testid="mission-card">
                       <CardContent className="space-y-3 p-6">
-                        <SectionEyebrow testId="mission-eyebrow">Mission</SectionEyebrow>
+                        <SectionEyebrow testId="mission-eyebrow">{copy.about.missionLabel}</SectionEyebrow>
                         <p className="text-sm leading-7 text-[#1A1A1A]" data-testid="mission-text">
-                          {siteContent.about.mission}
+                          {copy.about.mission}
                         </p>
                       </CardContent>
                     </Card>
                     <Card className="rounded-[2rem] border border-[#E2DFD9] bg-[#F9F8F6] shadow-none" data-testid="vision-card">
                       <CardContent className="space-y-3 p-6">
-                        <SectionEyebrow testId="vision-eyebrow">Vision</SectionEyebrow>
+                        <SectionEyebrow testId="vision-eyebrow">{copy.about.visionLabel}</SectionEyebrow>
                         <p className="text-sm leading-7 text-[#1A1A1A]" data-testid="vision-text">
-                          {siteContent.about.vision}
+                          {copy.about.vision}
                         </p>
                       </CardContent>
                     </Card>
@@ -413,13 +455,13 @@ function App() {
 
                   <div className="rounded-[2rem] border border-[#E2DFD9] bg-[#efece7] p-6 md:p-8" data-testid="supporting-brand-panel">
                     <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9E4723]" data-testid="supporting-brand-label">
-                      Supporting foundation
+                      {copy.about.supportingLabel}
                     </p>
                     <h3 className="mt-3 font-[Playfair_Display] text-3xl text-[#1A1A1A]" data-testid="supporting-brand-title">
-                      {siteContent.brand.supportingName}
+                      {copy.about.supportingTitle}
                     </h3>
                     <p className="mt-4 text-sm leading-7 text-[#4A4A4A]" data-testid="supporting-brand-description">
-                      The farmer producer organization strengthens small and marginal farmers through collective development, market access, packaging support, financial awareness, and sustainable agriculture practices.
+                      {copy.about.supportingDescription}
                     </p>
                   </div>
                 </div>
@@ -434,49 +476,49 @@ function App() {
           >
             <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div className="space-y-4">
-                <SectionEyebrow testId="products-eyebrow">Products overview</SectionEyebrow>
+                <SectionEyebrow testId="products-eyebrow">{copy.productsSection.eyebrow}</SectionEyebrow>
                 <h2 className="font-[Playfair_Display] text-4xl text-[#1A1A1A] sm:text-5xl" data-testid="products-title">
-                  Purity in every category.
+                  {copy.productsSection.title}
                 </h2>
               </div>
               <p className="max-w-2xl text-base leading-8 text-[#4A4A4A]" data-testid="products-description">
-                Our products reflect careful cultivation, responsible sourcing, and practical value for homes, retailers, and food partners.
+                {copy.productsSection.description}
               </p>
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-              {siteContent.products.map((product) => (
-                <ProductCard key={product.id} product={product} />
+              {copy.products.map((product) => (
+                <ProductCard key={`${language}-${product.id}`} product={product} />
               ))}
             </div>
           </section>
 
           <section className="relative overflow-hidden bg-[#2C402E] py-20 text-[#F9F8F6] lg:py-28" data-testid="impact-section" id="impact">
             <div className="editorial-marquee text-sm uppercase tracking-[0.35em] text-white/20" data-testid="impact-marquee">
-              <span>{siteContent.marquee.repeat(2)}</span>
-              <span>{siteContent.marquee.repeat(2)}</span>
+              <span>{copy.impactSection.marquee.repeat(2)}</span>
+              <span>{copy.impactSection.marquee.repeat(2)}</span>
             </div>
 
             <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="max-w-3xl space-y-4">
-                <SectionEyebrow testId="impact-eyebrow">Farmer network impact</SectionEyebrow>
+                <SectionEyebrow testId="impact-eyebrow">{copy.impactSection.eyebrow}</SectionEyebrow>
                 <h2 className="font-[Playfair_Display] text-4xl text-[#F9F8F6] sm:text-5xl" data-testid="impact-title">
-                  Growing value across the entire agricultural chain.
+                  {copy.impactSection.title}
                 </h2>
                 <p className="text-base leading-8 text-white/75" data-testid="impact-description">
-                  Every purchase supports a wider movement for better market access, stronger rural livelihoods, and sustainable food systems.
+                  {copy.impactSection.description}
                 </p>
               </div>
 
               <div className="mt-12 grid gap-6 md:grid-cols-3">
-                {siteContent.stats.map((stat, index) => {
+                {copy.impactSection.stats.map((stat, index) => {
                   const Icon = impactIcons[index] ?? Users;
 
                   return (
                     <div
                       className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
                       data-testid={`impact-stat-card-${stat.id}`}
-                      key={stat.id}
+                      key={`${language}-${stat.id}`}
                     >
                       <Icon className="h-6 w-6 text-[#D4A373]" data-testid={`impact-stat-icon-${stat.id}`} />
                       <p className="mt-8 font-[Playfair_Display] text-5xl" data-testid={`impact-stat-value-${stat.id}`}>
@@ -500,17 +542,17 @@ function App() {
                     alt="Sustainable farming landscape"
                     className="aspect-[4/5] h-full w-full object-cover"
                     data-testid="why-us-image"
-                    src="https://images.pexels.com/photos/33786776/pexels-photo-33786776.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    src={siteContent.media.sustainability}
                   />
                 </div>
                 <div className="rounded-[2rem] border border-[#E2DFD9] bg-[#F9F8F6] p-6" data-testid="core-values-panel">
-                  <SectionEyebrow testId="core-values-eyebrow">Core values</SectionEyebrow>
+                  <SectionEyebrow testId="core-values-eyebrow">{copy.valuesSection.coreValuesLabel}</SectionEyebrow>
                   <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                    {["Integrity", "Commitment", "Sustainability", "Collaboration"].map((value, index) => (
+                    {copy.valuesSection.coreValues.map((value, index) => (
                       <div
                         className="rounded-full border border-[#d9d2c6] px-4 py-3 text-sm text-[#1A1A1A]"
                         data-testid={`core-value-pill-${index + 1}`}
-                        key={value}
+                        key={`${language}-${value}`}
                       >
                         {value}
                       </div>
@@ -520,17 +562,17 @@ function App() {
               </div>
 
               <div className="space-y-6">
-                <SectionEyebrow testId="why-us-eyebrow">Sustainability & trust</SectionEyebrow>
+                <SectionEyebrow testId="why-us-eyebrow">{copy.valuesSection.eyebrow}</SectionEyebrow>
                 <h2 className="font-[Playfair_Display] text-4xl text-[#1A1A1A] sm:text-5xl" data-testid="why-us-title">
-                  Why customers and farming communities choose us.
+                  {copy.valuesSection.title}
                 </h2>
                 <p className="max-w-3xl text-base leading-8 text-[#4A4A4A]" data-testid="why-us-description">
-                  We bring together responsible farming, transparent operations, and dependable quality so that producers and buyers both benefit.
+                  {copy.valuesSection.description}
                 </p>
 
                 <div className="grid gap-5">
-                  {siteContent.values.map((value) => (
-                    <ValueCard key={value.id} value={value} />
+                  {copy.valuesSection.values.map((value) => (
+                    <ValueCard key={`${language}-${value.id}`} value={value} />
                   ))}
                 </div>
               </div>
@@ -541,24 +583,24 @@ function App() {
             <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
               <div className="space-y-8">
                 <div className="space-y-4">
-                  <SectionEyebrow testId="contact-eyebrow">Contact & partnerships</SectionEyebrow>
+                  <SectionEyebrow testId="contact-eyebrow">{copy.contactSection.eyebrow}</SectionEyebrow>
                   <h2 className="font-[Playfair_Display] text-4xl text-[#1A1A1A] sm:text-5xl" data-testid="contact-title">
-                    Let’s grow something meaningful together.
+                    {copy.contactSection.title}
                   </h2>
                   <p className="max-w-xl text-base leading-8 text-[#4A4A4A]" data-testid="contact-description">
-                    Reach out for product inquiries, distribution opportunities, sourcing partnerships, or farmer network collaboration.
+                    {copy.contactSection.description}
                   </p>
                 </div>
 
                 <div className="grid gap-4">
                   {contactItems.map((item) => (
-                    <ContactItem item={item} key={item.id} />
+                    <ContactItem item={item} key={`${language}-${item.id}`} />
                   ))}
                 </div>
 
                 <div className="rounded-[2rem] border border-[#d9d2c6] bg-[#f9f8f6] p-6" data-testid="farmer-support-panel">
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9E4723]" data-testid="farmer-support-label">
-                    Farmer support lines
+                    {copy.contactSection.farmerSupportLabel}
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
                     {siteContent.contact.farmerSupport.map((number, index) => (
@@ -575,7 +617,7 @@ function App() {
                 </div>
               </div>
 
-              <ContactForm />
+              <ContactForm content={copy.contactForm} />
             </div>
           </section>
         </main>
@@ -596,12 +638,12 @@ function App() {
                   {siteContent.brand.name}
                 </p>
                 <p className="mt-2 max-w-xl text-sm leading-7 text-white/70" data-testid="footer-brand-description">
-                  Choose better. Support farmers. Live healthier.
+                  {copy.footer.tagline}
                 </p>
               </div>
             </div>
             <p className="text-sm uppercase tracking-[0.16em] text-white/60" data-testid="footer-supporting-text">
-              {siteContent.brand.supportingName}
+              {copy.footer.supportingText}
             </p>
           </div>
         </footer>

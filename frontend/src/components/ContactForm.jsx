@@ -16,7 +16,7 @@ const initialForm = {
   message: "",
 };
 
-export const ContactForm = () => {
+export const ContactForm = ({ content }) => {
   const [form, setForm] = useState(initialForm);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -41,11 +41,11 @@ export const ContactForm = () => {
 
     try {
       await axios.post(`${BACKEND_URL}/api/inquiries`, form);
-      toast.success("Thanks for reaching out. Our team will contact you soon.");
+      toast.success(content.successToast);
       setForm(initialForm);
     } catch (error) {
       console.error(error);
-      toast.error("We couldn’t send your message right now. Please try again.");
+      toast.error(content.errorToast);
     } finally {
       setIsSubmitting(false);
     }
@@ -62,13 +62,13 @@ export const ContactForm = () => {
           className="text-xs font-bold uppercase tracking-[0.2em] text-[#9E4723]"
           data-testid="contact-form-eyebrow"
         >
-          Start a conversation
+          {content.eyebrow}
         </p>
         <h3
           className="font-[Playfair_Display] text-3xl text-[#1A1A1A]"
           data-testid="contact-form-title"
         >
-          Tell us what you need.
+          {content.title}
         </h3>
       </div>
 
@@ -79,7 +79,7 @@ export const ContactForm = () => {
           data-testid="contact-name-input"
           name="name"
           onChange={handleChange}
-          placeholder="Your name"
+          placeholder={content.placeholders.name}
           required
           value={form.name}
         />
@@ -89,7 +89,7 @@ export const ContactForm = () => {
           data-testid="contact-email-input"
           name="email"
           onChange={handleChange}
-          placeholder="Your email"
+          placeholder={content.placeholders.email}
           required
           type="email"
           value={form.email}
@@ -102,7 +102,7 @@ export const ContactForm = () => {
         data-testid="contact-phone-input"
         name="phone"
         onChange={handleChange}
-        placeholder="Phone number"
+        placeholder={content.placeholders.phone}
         required
         value={form.phone}
       />
@@ -113,14 +113,14 @@ export const ContactForm = () => {
         data-testid="contact-message-input"
         name="message"
         onChange={handleChange}
-        placeholder="Share your requirement, inquiry, or partnership idea"
+        placeholder={content.placeholders.message}
         required
         value={form.message}
       />
 
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-[#4A4A4A]" data-testid="contact-form-note">
-          Prefer a direct reply? Leave your phone number and we’ll get back to you.
+          {content.note}
         </p>
         <Button
           className="h-12 rounded-full bg-[#2C402E] px-6 text-[#F9F8F6] hover:bg-[#1f2d20]"
@@ -128,7 +128,7 @@ export const ContactForm = () => {
           disabled={isDisabled}
           type="submit"
         >
-          {isSubmitting ? "Sending..." : "Send inquiry"}
+          {isSubmitting ? content.sending : content.submit}
           <Send className="h-4 w-4" />
         </Button>
       </div>
