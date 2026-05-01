@@ -45,3 +45,4 @@ I need a static website to showcase the info
 
 ## Mobile UX Updates
 - Added a mobile hamburger menu with all navigation options, keeping route-based navigation usable on phone screens.
+- Reworked mobile section flow to prioritize text before oversized images, reduced mobile image heights, and tightened vertical spacing for a cleaner reading experience.

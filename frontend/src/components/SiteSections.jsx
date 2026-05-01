@@ -241,12 +241,12 @@ export const HeroSection = ({ copy }) => (
 );
 
 export const AboutSection = ({ copy }) => (
-  <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28" data-testid="about-section" id="about">
+  <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-18 lg:px-8 lg:py-28" data-testid="about-section" id="about">
     <div className="grid gap-8 lg:grid-cols-12">
-      <div className="lg:col-span-5">
+      <div className="order-2 lg:order-1 lg:col-span-5">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
           <div className="overflow-hidden rounded-[2rem] border border-[#E2DFD9] bg-[#efece7]">
-            <img alt="Farmer community" className="aspect-[4/5] h-full w-full object-cover" data-testid="about-farmer-image" src={siteContent.media.aboutFarmer} />
+            <img alt="Farmer community" className="aspect-[4/3] h-full w-full object-cover sm:aspect-[4/5]" data-testid="about-farmer-image" src={siteContent.media.aboutFarmer} />
           </div>
           <div className="overflow-hidden rounded-[2rem] border border-[#E2DFD9] bg-[#efece7]">
             <img alt="Agricultural field" className="aspect-[4/3] h-full w-full object-cover" data-testid="about-field-image" src={siteContent.media.aboutField} />
@@ -254,11 +254,11 @@ export const AboutSection = ({ copy }) => (
         </div>
       </div>
 
-      <div className="lg:col-span-7 lg:pl-8">
+      <div className="order-1 lg:order-2 lg:col-span-7 lg:pl-8">
         <div className="section-reveal space-y-8">
           <SectionEyebrow testId="about-eyebrow">{copy.about.eyebrow}</SectionEyebrow>
           <div className="space-y-4">
-            <h2 className="max-w-3xl font-[Playfair_Display] text-4xl text-[#1A1A1A] sm:text-5xl" data-testid="about-title">
+            <h2 className="max-w-3xl font-[Playfair_Display] text-3xl text-[#1A1A1A] sm:text-4xl lg:text-5xl" data-testid="about-title">
               {copy.about.title}
             </h2>
             <p className="max-w-3xl text-base leading-8 text-[#4A4A4A]" data-testid="about-description">
@@ -293,23 +293,23 @@ export const AboutSection = ({ copy }) => (
 );
 
 export const FounderSection = ({ copy, language }) => (
-  <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28" data-testid="founder-section" id="founder">
+  <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-18 lg:px-8 lg:py-28" data-testid="founder-section" id="founder">
     <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-      <div className="space-y-6">
+      <div className="order-2 space-y-6 lg:order-1">
         <div className="overflow-hidden rounded-[2rem] border border-[#E2DFD9] bg-[#efece7]">
-          <img alt={copy.founder.title} className="aspect-[4/5] h-full w-full object-cover" data-testid="founder-primary-image" src={siteContent.media.founderPrimary} />
+          <img alt={copy.founder.title} className="aspect-[4/3] h-full w-full object-cover sm:aspect-square lg:aspect-[4/5]" data-testid="founder-primary-image" src={siteContent.media.founderPrimary} />
         </div>
 
         <div className="rounded-[2rem] border border-[#E2DFD9] bg-[#2C402E] p-6 text-[#F9F8F6]" data-testid="founder-quote-card">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4A373]" data-testid="founder-quote-label">{copy.founder.eyebrow}</p>
-          <p className="mt-4 font-[Playfair_Display] text-2xl leading-relaxed" data-testid="founder-quote-text">“{copy.founder.quote}”</p>
+          <p className="mt-4 font-[Playfair_Display] text-xl leading-relaxed sm:text-2xl" data-testid="founder-quote-text">“{copy.founder.quote}”</p>
         </div>
       </div>
 
-      <div className="space-y-6">
+      <div className="order-1 space-y-6 lg:order-2">
         <SectionEyebrow testId="founder-eyebrow">{copy.founder.eyebrow}</SectionEyebrow>
         <div className="space-y-4">
-          <h2 className="font-[Playfair_Display] text-4xl text-[#1A1A1A] sm:text-5xl" data-testid="founder-title">{copy.founder.title}</h2>
+          <h2 className="font-[Playfair_Display] text-3xl text-[#1A1A1A] sm:text-4xl lg:text-5xl" data-testid="founder-title">{copy.founder.title}</h2>
           <p className="max-w-3xl text-base leading-8 text-[#4A4A4A]" data-testid="founder-subtitle">{copy.founder.subtitle}</p>
         </div>
 
@@ -378,7 +378,7 @@ export const FounderSection = ({ copy, language }) => (
 );
 
 export const ProductsSection = ({ copy }) => (
-  <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28" data-testid="products-section" id="products">
+  <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-18 lg:px-8 lg:py-28" data-testid="products-section" id="products">
     <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
       <div className="space-y-4">
         <SectionEyebrow testId="products-eyebrow">{copy.productsSection.eyebrow}</SectionEyebrow>
@@ -396,7 +396,7 @@ export const ProductsSection = ({ copy }) => (
 );
 
 export const ImpactSection = ({ copy }) => (
-  <section className="relative overflow-hidden bg-[#2C402E] py-20 text-[#F9F8F6] lg:py-28" data-testid="impact-section" id="impact">
+  <section className="relative overflow-hidden bg-[#2C402E] py-14 text-[#F9F8F6] sm:py-20 lg:py-28" data-testid="impact-section" id="impact">
     <div className="editorial-marquee text-sm uppercase tracking-[0.35em] text-white/20" data-testid="impact-marquee">
       <span>{copy.impactSection.marquee.repeat(2)}</span>
       <span>{copy.impactSection.marquee.repeat(2)}</span>
@@ -427,11 +427,11 @@ export const ImpactSection = ({ copy }) => (
 );
 
 export const ValuesSection = ({ copy }) => (
-  <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28" data-testid="why-us-section">
+  <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-18 lg:px-8 lg:py-28" data-testid="why-us-section">
     <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-      <div className="space-y-6">
+      <div className="order-2 space-y-6 lg:order-1">
         <div className="overflow-hidden rounded-[2rem] border border-[#E2DFD9] bg-[#efece7]">
-          <img alt="Sustainable farming landscape" className="aspect-[4/5] h-full w-full object-cover" data-testid="why-us-image" src={siteContent.media.sustainability} />
+          <img alt="Sustainable farming landscape" className="aspect-[4/3] h-full w-full object-cover sm:aspect-[4/5]" data-testid="why-us-image" src={siteContent.media.sustainability} />
         </div>
         <div className="rounded-[2rem] border border-[#E2DFD9] bg-[#F9F8F6] p-6" data-testid="core-values-panel">
           <SectionEyebrow testId="core-values-eyebrow">{copy.valuesSection.coreValuesLabel}</SectionEyebrow>
@@ -445,9 +445,9 @@ export const ValuesSection = ({ copy }) => (
         </div>
       </div>
 
-      <div className="space-y-6">
+      <div className="order-1 space-y-6 lg:order-2">
         <SectionEyebrow testId="why-us-eyebrow">{copy.valuesSection.eyebrow}</SectionEyebrow>
-        <h2 className="font-[Playfair_Display] text-4xl text-[#1A1A1A] sm:text-5xl" data-testid="why-us-title">{copy.valuesSection.title}</h2>
+        <h2 className="font-[Playfair_Display] text-3xl text-[#1A1A1A] sm:text-4xl lg:text-5xl" data-testid="why-us-title">{copy.valuesSection.title}</h2>
         <p className="max-w-3xl text-base leading-8 text-[#4A4A4A]" data-testid="why-us-description">{copy.valuesSection.description}</p>
 
         <div className="grid gap-5">
@@ -493,7 +493,7 @@ export const ContactSection = ({ copy }) => {
   ];
 
   return (
-    <section className="bg-[#EFECE7] py-20 lg:py-28" data-testid="contact-section" id="contact">
+    <section className="bg-[#EFECE7] py-14 sm:py-20 lg:py-28" data-testid="contact-section" id="contact">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
         <div className="space-y-8">
           <div className="space-y-4">
