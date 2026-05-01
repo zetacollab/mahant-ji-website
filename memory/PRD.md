@@ -63,3 +63,10 @@ I need a static website to showcase the info
 
 ## About Page Media Updates
 - Replaced the About page supporting image with the newly provided event/leadership photo.
+
+## SEO & Performance Updates
+- Replaced generic head tags with brand-specific title, description, Open Graph, Twitter, theme color, manifest, and favicon metadata.
+- Added route-aware SEO updates in the frontend so each page now sets its own title, description, canonical URL, og:url, and structured data.
+- Added robots.txt, sitemap.xml, favicon.svg, and site.webmanifest for stronger crawlability and site metadata completeness.
+- Improved frontend performance by removing heavy third-party head scripts/badges, moving font loading to the document head, and lazy-loading non-critical images with async decoding.
+- Added semantic H1 structure for route pages and normalized canonicals to exclude query parameters for better SEO consistency.

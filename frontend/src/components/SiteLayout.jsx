@@ -141,7 +141,9 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
     ensureMeta('meta[property="og:title"]', { property: "og:title" }).setAttribute("content", seo.title);
     ensureMeta('meta[property="og:description"]', { property: "og:description" }).setAttribute("content", seo.description);
     ensureMeta('meta[property="og:type"]', { property: "og:type" }).setAttribute("content", "website");
-    ensureMeta('meta[property="og:url"]', { property: "og:url" }).setAttribute("content", window.location.href);
+    const normalizedCanonical = `${window.location.origin}${window.location.pathname}`;
+
+    ensureMeta('meta[property="og:url"]', { property: "og:url" }).setAttribute("content", normalizedCanonical);
     ensureMeta('meta[property="og:image"]', { property: "og:image" }).setAttribute("content", seo.image);
     ensureMeta('meta[property="og:locale"]', { property: "og:locale" }).setAttribute("content", language === "hi" ? "hi_IN" : "en_IN");
     ensureMeta('meta[name="twitter:card"]', { name: "twitter:card" }).setAttribute("content", "summary_large_image");
@@ -155,7 +157,7 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
       canonical.setAttribute("rel", "canonical");
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute("href", window.location.href);
+    canonical.setAttribute("href", normalizedCanonical);
 
     let structuredData = document.head.querySelector("#structured-data");
     if (!structuredData) {
