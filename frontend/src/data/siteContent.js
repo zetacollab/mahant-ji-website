@@ -30,11 +30,21 @@ export const siteContent = {
       "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=80",
     sustainability:
       "https://images.pexels.com/photos/33786776/pexels-photo-33786776.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    founderPrimary:
+      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/sdbxkmoi_WhatsApp%20Image%202026-05-01%20at%2019.09.26%20%283%29.jpeg",
+    founderGallery: [
+      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/flpwqmfw_WhatsApp%20Image%202026-05-01%20at%2019.09.26%20%284%29.jpeg",
+      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/sdbxkmoi_WhatsApp%20Image%202026-05-01%20at%2019.09.26%20%283%29.jpeg",
+      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/xfq7t0y4_WhatsApp%20Image%202026-05-01%20at%2019.09.26%20%282%29.jpeg",
+      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/ugbd6pld_WhatsApp%20Image%202026-05-01%20at%2019.09.26.jpeg",
+      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/rqzh7a4e_WhatsApp%20Image%202026-05-01%20at%2019.09.26%20%281%29.jpeg",
+    ],
   },
   copy: {
     en: {
       navigation: [
         { label: "About", href: "#about" },
+        { label: "Founder", href: "#founder" },
         { label: "Products", href: "#products" },
         { label: "Impact", href: "#impact" },
         { label: "Contact", href: "#contact" },
@@ -74,6 +84,85 @@ export const siteContent = {
           "Backed by Rupwara Marwan Fed Farmers Producer Company Limited",
         supportingDescription:
           "The farmer producer organization strengthens small and marginal farmers through collective development, market access, packaging support, financial awareness, and sustainable agriculture practices.",
+      },
+      founder: {
+        eyebrow: "Founder leadership",
+        title: "Mahant Mritunjay Das (Mritunjay Kumar)",
+        subtitle:
+          "A visionary leader, social reformer, and passionate advocate of farmer empowerment who turned purpose into a movement for sustainable rural growth.",
+        paragraphs: [
+          "Born as Mritunjay Kumar and shaped by the values of Late Awdesh Thakur, Mahant Ji rose from a humble background with determination, discipline, and a deep commitment to service.",
+          "After completing his LLB degree and briefly practicing law, he chose to leave the courtroom behind and dedicate his life to agriculture, rural development, and farmer upliftment.",
+          "He has worked extensively on desi cow-based farming systems, organic agriculture, and direct farmer-to-market linkages, while playing a key role in establishing Rupwara Marwan Fed Farmers Producer Company Limited in December 2022.",
+          "Today, he actively supports and guides 4000+ farmers in Bihar toward organic farming, improved productivity, and stronger income opportunities while championing dignity, transparency, and long-term sustainability.",
+        ],
+        quote:
+          "Agriculture is not just about production—it is about people, livelihoods, and long-term sustainability.",
+        milestonesTitle: "Leadership highlights",
+        milestones: [
+          {
+            id: "law-to-land",
+            value: "LLB",
+            label: "academic foundation followed by a purposeful shift from law to agriculture",
+          },
+          {
+            id: "fpo-founded",
+            value: "Dec 2022",
+            label: "foundation period of Rupwara Marwan Fed Farmers Producer Company Limited",
+          },
+          {
+            id: "farmers-guided",
+            value: "4000+",
+            label: "farmers guided toward organic, transparent, and income-focused farming",
+          },
+        ],
+        focusTitle: "Focus areas",
+        focusAreas: [
+          "Desi cow-based farming systems",
+          "Organic and sustainable agriculture",
+          "Farmer reform and rural development",
+          "Direct market access with fair practices",
+        ],
+        addressTitle: "Founder location",
+        addressLines: [
+          "Village: Repura",
+          "Post Office: Bishnudattpur",
+          "Police Station: Karja",
+          "Block: Marwan",
+          "District: Muzaffarpur",
+          "State: Bihar",
+          "PIN Code: 843113",
+          "Country: India",
+        ],
+        galleryEyebrow: "Journey in action",
+        galleryTitle: "Founder gallery",
+        gallery: [
+          {
+            id: "recognition",
+            title: "Recognition & awards",
+            caption: "Representing farmer-led leadership and agri-business progress on public platforms.",
+          },
+          {
+            id: "public-speaking",
+            title: "Community leadership",
+            caption: "Addressing farmers and local stakeholders on rural development and agricultural transformation.",
+          },
+          {
+            id: "training-programme",
+            title: "Training & awareness",
+            caption: "Supporting field-level learning, farmer training, and climate-resilient agricultural practices.",
+          },
+          {
+            id: "field-visit",
+            title: "Field visits",
+            caption: "Staying connected to ground realities and helping farmers improve productivity directly at the source.",
+          },
+          {
+            id: "grassroots-network",
+            title: "Grassroots institution building",
+            caption: "Building collective platforms that strengthen farmer organization and local participation.",
+          },
+        ],
       },
       productsSection: {
         eyebrow: "Products overview",
@@ -200,6 +289,7 @@ export const siteContent = {
     hi: {
       navigation: [
         { label: "परिचय", href: "#about" },
+        { label: "संस्थापक", href: "#founder" },
         { label: "उत्पाद", href: "#products" },
         { label: "प्रभाव", href: "#impact" },
         { label: "संपर्क", href: "#contact" },
@@ -239,6 +329,85 @@ export const siteContent = {
           "रूपवाड़ा मड़वन फेड फार्मर्स प्रोड्यूसर कंपनी लिमिटेड द्वारा समर्थित",
         supportingDescription:
           "यह किसान उत्पादक संगठन छोटे और सीमांत किसानों को सामूहिक विकास, बाजार पहुँच, पैकेजिंग सहायता, वित्तीय जागरूकता और टिकाऊ कृषि पद्धतियों के माध्यम से सशक्त बनाता है।",
+      },
+      founder: {
+        eyebrow: "संस्थापक नेतृत्व",
+        title: "महंत मृत्युंजय दास (मृत्युंजय कुमार)",
+        subtitle:
+          "एक दूरदर्शी नेता, समाज सुधारक और किसान सशक्तिकरण के समर्पित समर्थक, जिन्होंने अपने उद्देश्य को टिकाऊ ग्रामीण विकास के आंदोलन में बदला।",
+        paragraphs: [
+          "मृत्युंजय कुमार के रूप में जन्मे महंत जी को स्वर्गीय अवधेश ठाकुर के परिश्रम, ईमानदारी और मूल्यों ने गहराई से प्रभावित किया। विनम्र पृष्ठभूमि से आगे बढ़ते हुए उन्होंने दृढ़ निश्चय और अनुशासन के साथ अपनी पहचान बनाई।",
+          "उन्होंने एलएलबी की पढ़ाई पूरी की और थोड़े समय तक वकालत भी की, लेकिन उनका वास्तविक उद्देश्य न्यायालय से आगे था। इसी कारण उन्होंने कृषि, ग्रामीण विकास और किसान उत्थान के लिए स्वयं को समर्पित कर दिया।",
+          "उन्होंने देसी गाय आधारित खेती, जैविक कृषि और किसानों को सीधे बाजार से जोड़ने पर व्यापक काम किया, और दिसंबर 2022 में रुपवाड़ा मड़वन फेड फार्मर्स प्रोड्यूसर कंपनी लिमिटेड की स्थापना में महत्वपूर्ण भूमिका निभाई।",
+          "आज वे बिहार में 4000+ किसानों को जैविक खेती अपनाने, उत्पादकता बढ़ाने और आय के बेहतर अवसर बनाने के लिए सक्रिय रूप से मार्गदर्शन दे रहे हैं, साथ ही सम्मान, पारदर्शिता और दीर्घकालिक स्थिरता को आगे बढ़ा रहे हैं।",
+        ],
+        quote:
+          "कृषि केवल उत्पादन नहीं है — यह लोगों, आजीविका और दीर्घकालिक स्थिरता के बारे में है।",
+        milestonesTitle: "नेतृत्व की प्रमुख झलकियाँ",
+        milestones: [
+          {
+            id: "law-to-land",
+            value: "LLB",
+            label: "शैक्षणिक आधार, जिसके बाद कानून से कृषि की ओर उद्देश्यपूर्ण बदलाव",
+          },
+          {
+            id: "fpo-founded",
+            value: "Dec 2022",
+            label: "रूपवाड़ा मड़वन फेड फार्मर्स प्रोड्यूसर कंपनी लिमिटेड की स्थापना का चरण",
+          },
+          {
+            id: "farmers-guided",
+            value: "4000+",
+            label: "जैविक, पारदर्शी और आय-केंद्रित खेती की ओर मार्गदर्शित किसान",
+          },
+        ],
+        focusTitle: "मुख्य कार्यक्षेत्र",
+        focusAreas: [
+          "देसी गाय आधारित खेती प्रणाली",
+          "जैविक और टिकाऊ कृषि",
+          "किसान सुधार और ग्रामीण विकास",
+          "उचित और पारदर्शी बाजार पहुँच",
+        ],
+        addressTitle: "संस्थापक का पता",
+        addressLines: [
+          "गाँव: रेपुरा",
+          "डाकघर: बिश्नुदत्तपुर",
+          "थाना: करजा",
+          "ब्लॉक: मड़वन",
+          "जिला: मुजफ्फरपुर",
+          "राज्य: बिहार",
+          "पिन कोड: 843113",
+          "देश: भारत",
+        ],
+        galleryEyebrow: "कार्य यात्रा की झलकियाँ",
+        galleryTitle: "संस्थापक गैलरी",
+        gallery: [
+          {
+            id: "recognition",
+            title: "सम्मान और पहचान",
+            caption: "किसान-नेतृत्व वाले प्रयासों और एग्री-बिजनेस प्रगति का सार्वजनिक मंचों पर प्रतिनिधित्व।",
+          },
+          {
+            id: "public-speaking",
+            title: "सामुदायिक नेतृत्व",
+            caption: "ग्रामीण विकास और कृषि परिवर्तन पर किसानों और स्थानीय हितधारकों को संबोधित करते हुए।",
+          },
+          {
+            id: "training-programme",
+            title: "प्रशिक्षण और जागरूकता",
+            caption: "क्षेत्रीय प्रशिक्षण, किसान जागरूकता और जलवायु-अनुकूल कृषि पद्धतियों को समर्थन देते हुए।",
+          },
+          {
+            id: "field-visit",
+            title: "मैदानी दौरे",
+            caption: "जमीन से जुड़े रहकर किसानों को सीधे खेत स्तर पर बेहतर उत्पादकता के लिए मार्गदर्शन।",
+          },
+          {
+            id: "grassroots-network",
+            title: "जमीनी संगठन निर्माण",
+            caption: "ऐसे सामूहिक मंचों का निर्माण जो किसानों के संगठन और स्थानीय भागीदारी को मजबूत बनाते हैं।",
+          },
+        ],
       },
       productsSection: {
         eyebrow: "उत्पाद परिचय",
