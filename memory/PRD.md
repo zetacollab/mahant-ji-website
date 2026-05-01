@@ -9,28 +9,29 @@ I need a static website to showcase the info
 - Kept MongoDB usage minimal and safe by storing inquiry submissions without exposing Mongo `_id` values in responses.
 - Followed a light organic earthy visual direction with image-led storytelling and strong farmer-impact sections.
 - Added bilingual content switching directly in the frontend so visitors can toggle between English and Hindi without page reloads.
-- Restructured the navigation into dedicated route pages so each nav item now opens a separate page while still preserving a rich homepage.
+- Restructured the navigation into dedicated route pages and later replaced the Impact page with a Team page based on updated requirements.
 - Incorporated later DOCX/DOC uploads as source material for company wording, founder details, and leadership team information.
 
 ## What’s Implemented
 - Branded homepage with hero, about, founder, products, impact, values, and contact sections.
 - Full bilingual English/Hindi experience across navigation, page content, founder story, footer, and contact form copy.
-- Real multi-page navigation with dedicated routes for About, Founder, Products, Impact, and Contact.
+- Multi-page navigation with dedicated routes for About, Founder, Team, Products, and Contact.
 - Shared site layout with persistent header, language toggle, logo, footer, and mobile hamburger menu across all pages.
 - Dedicated founder section for Mahant Mritunjay Das (Mritunjay Kumar) with biography, quote, milestones, focus areas, address details, and gallery using uploaded photos.
 - Updated founder spotlight to use the newly provided portrait with stronger mobile placement.
-- About page now includes a full leadership/team section based on uploaded team docs, with 10 director cards and direct email links.
+- Dedicated Team page with a featured founder block plus director cards, locations, and email links.
+- About page now contains the impact content and value-based positioning instead of using a separate Impact page.
 - Contact page with a working inquiry form and backend API support.
 - Improved hero text contrast, mobile section balance, and responsive navigation behavior.
 
 ## Prioritized Backlog
 ### P0
 - Review and approve all bilingual copy, especially founder wording, team labels, and Hindi phrasing.
-- Replace any remaining stock imagery with more official business/farm/product visuals.
+- Add official team member photos when provided by the user.
 
 ### P1
+- Replace remaining stock imagery with more official business/farm/product visuals.
 - Add a dedicated gallery/news page using approved company photos and press mentions.
-- Add map embed and richer partnership CTA blocks.
 - Add downloadable bilingual brochure/PDF section.
 
 ### P2
@@ -39,8 +40,8 @@ I need a static website to showcase the info
 - Add simple CMS/admin editing flow for future content updates.
 
 ## Next Tasks
+- Add real team photos as they become available.
 - Finalize approved English and Hindi content.
-- Expand product details and add real SKU-level product cards if needed.
 - Add gallery, press, and downloadable materials once assets are approved.
 
 ## Recent UI Tweaks

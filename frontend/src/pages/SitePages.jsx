@@ -41,13 +41,6 @@ export const ProductsPage = ({ copy }) => (
   </main>
 );
 
-export const ImpactPage = ({ copy }) => (
-  <main data-testid="impact-page">
-    <ImpactSection copy={copy} />
-    <ValuesSection copy={copy} />
-  </main>
-);
-
 export const ContactPage = ({ copy }) => (
   <main data-testid="contact-page">
     <ContactSection copy={copy} />
