@@ -494,6 +494,29 @@ export const TeamSection = ({ copy }) => (
         ))}
       </div>
 
+      <div className="grid gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
+        <div className="overflow-hidden rounded-[2rem] border border-[#E2DFD9] bg-[linear-gradient(180deg,#f7f4ee_0%,#efe6d9_100%)] p-4 sm:p-6" data-testid="team-founder-feature-card">
+          <img
+            alt="Mahant Mritunjay Das"
+            className="aspect-square h-full w-full object-contain"
+            data-testid="team-founder-feature-image"
+            src={siteContent.teamPhotos["mritunjay-kumar"]}
+          />
+        </div>
+
+        <div className="rounded-[2rem] border border-[#E2DFD9] bg-[#F9F8F6] p-6 md:p-8" data-testid="team-founder-feature-content">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9E4723]" data-testid="team-founder-feature-label">
+            {copy.team.founderHighlightLabel}
+          </p>
+          <h3 className="mt-3 font-[Playfair_Display] text-3xl text-[#1A1A1A] md:text-4xl" data-testid="team-founder-feature-title">
+            Mahant Mritunjay Das (Mritunjay Kumar)
+          </h3>
+          <p className="mt-4 text-base leading-8 text-[#4A4A4A]" data-testid="team-founder-feature-text">
+            {copy.team.founderHighlightText}
+          </p>
+        </div>
+      </div>
+
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {siteContent.teamMembers.map((member) => (
           <div
@@ -501,13 +524,28 @@ export const TeamSection = ({ copy }) => (
             data-testid={`team-card-${member.id}`}
             key={member.id}
           >
-            <div className="space-y-2">
-              <h3 className="font-[Playfair_Display] text-2xl text-[#1A1A1A]" data-testid={`team-member-name-${member.id}`}>
-                {member.name}
-              </h3>
-              <p className="text-sm uppercase tracking-[0.18em] text-[#9E4723]" data-testid={`team-member-role-${member.id}`}>
-                {copy.team.memberRole}
-              </p>
+            <div className="flex items-start gap-4">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-[1.25rem] border border-[#E2DFD9] bg-white text-lg font-semibold text-[#2C402E]" data-testid={`team-member-avatar-${member.id}`}>
+                {siteContent.teamPhotos[member.id] ? (
+                  <img
+                    alt={member.name}
+                    className="h-full w-full object-cover"
+                    data-testid={`team-member-avatar-image-${member.id}`}
+                    src={siteContent.teamPhotos[member.id]}
+                  />
+                ) : (
+                  <span>{member.name.charAt(0)}</span>
+                )}
+              </div>
+
+              <div className="space-y-2">
+                <h3 className="font-[Playfair_Display] text-2xl text-[#1A1A1A]" data-testid={`team-member-name-${member.id}`}>
+                  {member.name}
+                </h3>
+                <p className="text-sm uppercase tracking-[0.18em] text-[#9E4723]" data-testid={`team-member-role-${member.id}`}>
+                  {copy.team.memberRole}
+                </p>
+              </div>
             </div>
 
             <div className="mt-5 space-y-4">

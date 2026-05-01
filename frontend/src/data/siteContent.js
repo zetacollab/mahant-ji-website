@@ -87,6 +87,9 @@ export const siteContent = {
       email: "umeshchiknauta@gmail.com",
     },
   ],
+  teamPhotos: {
+    "mritunjay-kumar": "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/pyogey4g_WhatsApp%20Image%202026-05-01%20at%2019.22.13.jpeg",
+  },
   media: {
     hero:
       "https://images.unsplash.com/photo-1764277434161-23d72931335f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwyfHxhZ3JpY3VsdHVyZSUyMGxhbmRzY2FwZSUyMGZhcm0lMjBzdW5zZXR8ZW58MHx8fHwxNzc0ODk0ODA2fDA&ixlib=rb-4.1.0&q=85",
@@ -117,8 +120,8 @@ export const siteContent = {
       navigation: [
         { label: "About", path: "/about" },
         { label: "Founder", path: "/founder" },
+        { label: "Team", path: "/team" },
         { label: "Products", path: "/products" },
-        { label: "Impact", path: "/impact" },
         { label: "Contact", path: "/contact" },
       ],
       headerCta: "Reach us",
@@ -241,6 +244,9 @@ export const siteContent = {
         title: "A rural leadership ecosystem rooted in Muzaffarpur.",
         description:
           "Our board brings together grassroots experience, agricultural understanding, and a shared commitment to farmer empowerment, sustainable agriculture, transparent business practices, and rural economic development.",
+        founderHighlightLabel: "Founder & Director",
+        founderHighlightText:
+          "Mahant Mritunjay Das (Mritunjay Kumar) leads the organization with a rare blend of legal understanding, rural commitment, and farmer-first vision—making him both the founder face of the movement and an active member of the board.",
         values: [
           "Farmer empowerment",
           "Sustainable agriculture",
@@ -378,8 +384,8 @@ export const siteContent = {
       navigation: [
         { label: "परिचय", path: "/about" },
         { label: "संस्थापक", path: "/founder" },
+        { label: "टीम", path: "/team" },
         { label: "उत्पाद", path: "/products" },
-        { label: "प्रभाव", path: "/impact" },
         { label: "संपर्क", path: "/contact" },
       ],
       headerCta: "संपर्क करें",
@@ -502,6 +508,9 @@ export const siteContent = {
         title: "मुजफ्फरपुर में जड़ों वाला ग्रामीण नेतृत्व तंत्र।",
         description:
           "हमारा बोर्ड जमीनी अनुभव, कृषि की गहरी समझ और किसान सशक्तिकरण, टिकाऊ कृषि, पारदर्शी व्यावसायिक प्रक्रियाओं और ग्रामीण आर्थिक विकास के साझा संकल्प को साथ लाता है।",
+        founderHighlightLabel: "संस्थापक एवं निदेशक",
+        founderHighlightText:
+          "महंत मृत्युंजय दास (मृत्युंजय कुमार) संगठन का नेतृत्व कानूनी समझ, ग्रामीण प्रतिबद्धता और किसान-प्रथम दृष्टि के साथ करते हैं—वे इस आंदोलन का चेहरा भी हैं और बोर्ड के सक्रिय सदस्य भी।",
         values: [
           "किसान सशक्तिकरण",
           "टिकाऊ कृषि",

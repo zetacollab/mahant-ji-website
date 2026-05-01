@@ -24,7 +24,7 @@ export const HomePage = ({ copy, language }) => (
 export const AboutPage = ({ copy }) => (
   <main data-testid="about-page">
     <AboutSection copy={copy} />
-    <TeamSection copy={copy} />
+    <ImpactSection copy={copy} />
     <ValuesSection copy={copy} />
   </main>
 );
@@ -51,5 +51,11 @@ export const ImpactPage = ({ copy }) => (
 export const ContactPage = ({ copy }) => (
   <main data-testid="contact-page">
     <ContactSection copy={copy} />
+  </main>
+);
+
+export const TeamPage = ({ copy }) => (
+  <main data-testid="team-page">
+    <TeamSection copy={copy} />
   </main>
 );
