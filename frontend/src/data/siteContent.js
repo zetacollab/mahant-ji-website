@@ -6,7 +6,7 @@ export const siteContent = {
       hi: "रूपवाड़ा, मुजफ्फरपुर, बिहार",
     },
     website: "ruwanagro.com",
-    logo: "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/c422mrxs_WhatsApp%20Image%202026-05-01%20at%2018.45.23.jpeg",
+    logo: "/optimized/logo.webp",
   },
   contact: {
     address: "Rupwara, Muzaffarpur, Bihar, India",
@@ -91,31 +91,31 @@ export const siteContent = {
     },
   ],
   teamPhotos: {
-    "mritunjay-kumar": "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/pyogey4g_WhatsApp%20Image%202026-05-01%20at%2019.22.13.jpeg",
+    "mritunjay-kumar": "/optimized/founder-primary.webp",
   },
   media: {
     hero:
       "https://images.unsplash.com/photo-1764277434161-23d72931335f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwyfHxhZ3JpY3VsdHVyZSUyMGxhbmRzY2FwZSUyMGZhcm0lMjBzdW5zZXR8ZW58MHx8fHwxNzc0ODk0ODA2fDA&ixlib=rb-4.1.0&q=85",
     aboutFarmer:
-      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/gta6k5os_WhatsApp%20Image%202026-05-01%20at%2019.09.26%20%283%29.jpeg",
+      "/optimized/about-farmer.webp",
     aboutField:
       "https://images.pexels.com/photos/29912210/pexels-photo-29912210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     productBrownRice:
-      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/edanurkf_WhatsApp%20Image%202026-05-01%20at%2019.46.31.jpeg",
+      "/optimized/product-brown-rice.webp",
     productMillets:
-      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/q0iuxb3w_WhatsApp%20Image%202026-05-01%20at%2019.50.51.jpeg",
+      "/optimized/product-millets.webp",
     productSpices:
-      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/zigh02zm_WhatsApp%20Image%202026-05-01%20at%2019.52.51.jpeg",
+      "/optimized/product-spices.webp",
     sustainability:
       "https://images.pexels.com/photos/33786776/pexels-photo-33786776.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     founderPrimary:
-      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/pyogey4g_WhatsApp%20Image%202026-05-01%20at%2019.22.13.jpeg",
+      "/optimized/founder-primary.webp",
     founderGallery: [
-      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/flpwqmfw_WhatsApp%20Image%202026-05-01%20at%2019.09.26%20%284%29.jpeg",
-      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/sdbxkmoi_WhatsApp%20Image%202026-05-01%20at%2019.09.26%20%283%29.jpeg",
-      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/xfq7t0y4_WhatsApp%20Image%202026-05-01%20at%2019.09.26%20%282%29.jpeg",
-      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/ugbd6pld_WhatsApp%20Image%202026-05-01%20at%2019.09.26.jpeg",
-      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/rqzh7a4e_WhatsApp%20Image%202026-05-01%20at%2019.09.26%20%281%29.jpeg",
+      "/optimized/founder-1.webp",
+      "/optimized/founder-2.webp",
+      "/optimized/founder-3.webp",
+      "/optimized/founder-4.webp",
+      "/optimized/founder-5.webp",
     ],
   },
   copy: {

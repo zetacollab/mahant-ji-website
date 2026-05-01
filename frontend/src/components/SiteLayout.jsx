@@ -18,13 +18,14 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
 
   const seo = useMemo(() => {
     const origin = typeof window !== "undefined" ? window.location.origin : "";
+    const toAbsolute = (url) => (url.startsWith("http") ? url : `${origin}${url}`);
 
     switch (location.pathname) {
       case "/about":
         return {
           title: `${copy.about.title} | ${siteContent.brand.name}`,
           description: copy.about.description,
-          image: siteContent.media.aboutFarmer,
+          image: toAbsolute(siteContent.media.aboutFarmer),
           schema: {
             "@context": "https://schema.org",
             "@type": "AboutPage",
@@ -37,14 +38,14 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
         return {
           title: `${copy.founder.title} | ${siteContent.brand.name}`,
           description: copy.founder.subtitle,
-          image: siteContent.media.founderPrimary,
+          image: toAbsolute(siteContent.media.founderPrimary),
           schema: {
             "@context": "https://schema.org",
             "@type": "Person",
             name: copy.founder.title,
             jobTitle: language === "hi" ? "संस्थापक" : "Founder",
             description: copy.founder.subtitle,
-            image: siteContent.media.founderPrimary,
+            image: toAbsolute(siteContent.media.founderPrimary),
             worksFor: {
               "@type": "Organization",
               name: siteContent.brand.name,
@@ -55,7 +56,7 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
         return {
           title: `${copy.team.title} | ${siteContent.brand.name}`,
           description: copy.team.description,
-          image: siteContent.teamPhotos["mritunjay-kumar"],
+          image: toAbsolute(siteContent.teamPhotos["mritunjay-kumar"]),
           schema: {
             "@context": "https://schema.org",
             "@type": "Organization",
@@ -71,7 +72,7 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
         return {
           title: `${copy.productsSection.title} | ${siteContent.brand.name}`,
           description: copy.productsSection.description,
-          image: siteContent.media.productBrownRice,
+          image: toAbsolute(siteContent.media.productBrownRice),
           schema: {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
@@ -83,7 +84,7 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
         return {
           title: `${copy.contactSection.title} | ${siteContent.brand.name}`,
           description: copy.contactSection.description,
-          image: siteContent.brand.logo,
+          image: toAbsolute(siteContent.brand.logo),
           schema: {
             "@context": "https://schema.org",
             "@type": "ContactPage",
@@ -95,7 +96,7 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
         return {
           title: `${siteContent.brand.name} | ${copy.hero.title}`,
           description: copy.hero.subtitle,
-          image: siteContent.media.founderPrimary,
+          image: toAbsolute(siteContent.media.founderPrimary),
           schema: {
             "@context": "https://schema.org",
             "@graph": [
@@ -103,7 +104,7 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
                 "@type": "Organization",
                 name: siteContent.brand.name,
                 url: origin,
-                logo: siteContent.brand.logo,
+                logo: toAbsolute(siteContent.brand.logo),
                 sameAs: [siteContent.socials.facebook],
               },
               {
