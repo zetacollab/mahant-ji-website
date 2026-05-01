@@ -296,8 +296,8 @@ export const FounderSection = ({ copy, language }) => (
   <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-18 lg:px-8 lg:py-28" data-testid="founder-section" id="founder">
     <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
       <div className="order-2 space-y-6 lg:order-1">
-        <div className="overflow-hidden rounded-[2rem] border border-[#E2DFD9] bg-[#efece7]">
-          <img alt={copy.founder.title} className="aspect-[4/3] h-full w-full object-cover sm:aspect-square lg:aspect-[4/5]" data-testid="founder-primary-image" src={siteContent.media.founderPrimary} />
+        <div className="hidden overflow-hidden rounded-[2rem] border border-[#E2DFD9] bg-[linear-gradient(180deg,#f7f4ee_0%,#efe6d9_100%)] p-4 sm:p-6 lg:block">
+          <img alt={copy.founder.title} className="aspect-[4/3] h-full w-full object-contain sm:aspect-square lg:aspect-[4/5]" data-testid="founder-primary-image" src={siteContent.media.founderPrimary} />
         </div>
 
         <div className="rounded-[2rem] border border-[#E2DFD9] bg-[#2C402E] p-6 text-[#F9F8F6]" data-testid="founder-quote-card">
@@ -311,6 +311,15 @@ export const FounderSection = ({ copy, language }) => (
         <div className="space-y-4">
           <h2 className="font-[Playfair_Display] text-3xl text-[#1A1A1A] sm:text-4xl lg:text-5xl" data-testid="founder-title">{copy.founder.title}</h2>
           <p className="max-w-3xl text-base leading-8 text-[#4A4A4A]" data-testid="founder-subtitle">{copy.founder.subtitle}</p>
+        </div>
+
+        <div className="overflow-hidden rounded-[1.75rem] border border-[#E2DFD9] bg-[linear-gradient(180deg,#f7f4ee_0%,#efe6d9_100%)] p-4 lg:hidden" data-testid="founder-mobile-portrait-card">
+          <img
+            alt={copy.founder.title}
+            className="aspect-square h-full w-full object-contain"
+            data-testid="founder-primary-image"
+            src={siteContent.media.founderPrimary}
+          />
         </div>
 
         <div className="space-y-4">

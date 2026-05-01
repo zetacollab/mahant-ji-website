@@ -31,7 +31,7 @@ export const siteContent = {
     sustainability:
       "https://images.pexels.com/photos/33786776/pexels-photo-33786776.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     founderPrimary:
-      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/sdbxkmoi_WhatsApp%20Image%202026-05-01%20at%2019.09.26%20%283%29.jpeg",
+      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/pyogey4g_WhatsApp%20Image%202026-05-01%20at%2019.22.13.jpeg",
     founderGallery: [
       "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/flpwqmfw_WhatsApp%20Image%202026-05-01%20at%2019.09.26%20%284%29.jpeg",
       "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/sdbxkmoi_WhatsApp%20Image%202026-05-01%20at%2019.09.26%20%283%29.jpeg",
