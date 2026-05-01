@@ -73,3 +73,6 @@ I need a static website to showcase the info
 
 ## Homepage Performance Refinements
 - Slimmed the homepage by replacing the full founder and full contact sections with lighter preview sections, while preserving full content on their dedicated pages for better speed and reduced content depth.
+
+## Image Optimization Updates
+- Generated and switched to optimized local WEBP assets for the heaviest uploaded custom images (logo, founder, gallery, about image, and product packaging) to reduce transfer size and improve Lighthouse consistency.
