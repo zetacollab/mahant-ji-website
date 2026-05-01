@@ -46,9 +46,9 @@ const languageButtonClass = (active) =>
       : "bg-transparent text-[#1A1A1A] hover:bg-[#EFECE7]"
   }`;
 
-const SectionEyebrow = ({ children, testId }) => (
+const SectionEyebrow = ({ children, testId, className = "" }) => (
   <p
-    className="text-xs font-bold uppercase tracking-[0.24em] text-[#9E4723]"
+    className={`text-xs font-bold uppercase tracking-[0.24em] text-[#9E4723] ${className}`}
     data-testid={testId}
   >
     {children}
@@ -280,7 +280,12 @@ function App() {
 
             <div className="relative mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
               <div className="section-reveal max-w-3xl space-y-8 text-white">
-                <SectionEyebrow testId="hero-eyebrow">{copy.hero.eyebrow}</SectionEyebrow>
+                <SectionEyebrow
+                  className="text-[#F7E8CF] drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]"
+                  testId="hero-eyebrow"
+                >
+                  {copy.hero.eyebrow}
+                </SectionEyebrow>
                 <h1
                   className="max-w-4xl font-[Playfair_Display] text-4xl tracking-tight sm:text-5xl lg:text-6xl"
                   data-testid="hero-title"

@@ -41,3 +41,6 @@ I need a static website to showcase the info
 - Finalize brand-approved English and Hindi copy.
 - Expand product details and add real SKU-level product cards if needed.
 - Add gallery, press, and downloadable materials once assets are approved.
+
+## Recent UI Tweaks
+- Improved hero eyebrow text contrast on the image banner by replacing the low-visibility orange with a lighter cream tone and subtle shadow for better readability in Hindi and English.
