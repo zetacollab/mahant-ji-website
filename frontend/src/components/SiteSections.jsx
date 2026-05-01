@@ -27,9 +27,9 @@ const featureIcons = {
 };
 
 const productImages = {
-  "grains-cereals": siteContent.media.productGrains,
-  "natural-agro-products": siteContent.media.productNatural,
-  "value-added-products": siteContent.media.productValueAdded,
+  "grains-cereals": siteContent.media.productBrownRice,
+  "natural-agro-products": siteContent.media.productMillets,
+  "value-added-products": siteContent.media.productSpices,
 };
 
 const impactIcons = [Users, CircleDollarSign, Globe];

@@ -97,12 +97,12 @@ export const siteContent = {
       "https://images.pexels.com/photos/18620451/pexels-photo-18620451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     aboutField:
       "https://images.pexels.com/photos/29912210/pexels-photo-29912210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    productGrains:
-      "https://images.pexels.com/photos/1393382/pexels-photo-1393382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    productNatural:
-      "https://images.unsplash.com/photo-1706793990285-b2a7d9aaf17d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHw0fHxmcmVzaCUyMG9yZ2FuaWMlMjBncmFpbnMlMjBzcGljZXMlMjBtYXJrZXR8ZW58MHx8fHwxNzc0ODk0Nzg2fDA&ixlib=rb-4.1.0&q=85",
-    productValueAdded:
-      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=80",
+    productBrownRice:
+      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/edanurkf_WhatsApp%20Image%202026-05-01%20at%2019.46.31.jpeg",
+    productMillets:
+      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/q0iuxb3w_WhatsApp%20Image%202026-05-01%20at%2019.50.51.jpeg",
+    productSpices:
+      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/zigh02zm_WhatsApp%20Image%202026-05-01%20at%2019.52.51.jpeg",
     sustainability:
       "https://images.pexels.com/photos/33786776/pexels-photo-33786776.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     founderPrimary:
@@ -262,26 +262,26 @@ export const siteContent = {
         eyebrow: "Products overview",
         title: "Purity in every category.",
         description:
-          "Our products reflect careful cultivation, responsible sourcing, and practical value for homes, retailers, and food partners.",
+          "From wholesome brown rice and nutritious millets to natural spices and everyday kitchen blends, our product range reflects careful sourcing and practical value for modern homes.",
       },
       products: [
         {
           id: "grains-cereals",
-          title: "Grains & Cereals",
+          title: "Brown Rice & Whole Grains",
           description:
-            "Carefully cultivated staples that retain their natural goodness, freshness, and consistent quality.",
+            "Naturally nourishing staples designed for everyday cooking, with rich fiber, wholesome grain integrity, and clean farm-led sourcing.",
         },
         {
           id: "natural-agro-products",
-          title: "Natural Agro Products",
+          title: "Nutritious Millets",
           description:
-            "Farm-sourced products with minimal processing and a strong focus on purity, traceability, and trust.",
+            "Pearl millet, finger millet, little millet, foxtail millet, and millet-based mixes that support healthier living and modern nutrition needs.",
         },
         {
           id: "value-added-products",
-          title: "Value-Added Products",
+          title: "Spices & Masalas",
           description:
-            "Convenient, thoughtfully processed offerings designed for better usability, nutrition, and everyday cooking.",
+            "Turmeric, red chilli, coriander, cumin, garam masala, and kitchen blends packed for pure taste, aroma, and everyday convenience.",
         },
       ],
       impactSection: {
@@ -526,26 +526,26 @@ export const siteContent = {
         eyebrow: "उत्पाद परिचय",
         title: "हर श्रेणी में शुद्धता।",
         description:
-          "हमारे उत्पाद सावधानीपूर्वक खेती, जिम्मेदार सोर्सिंग और घरों, रिटेलर्स तथा व्यापारिक साझेदारों के लिए उपयोगी मूल्य को दर्शाते हैं।",
+          "पौष्टिक ब्राउन राइस, हेल्दी मिलेट्स, प्राकृतिक मसाले और रोज़मर्रा के किचन ब्लेंड्स—हमारी उत्पाद श्रृंखला सावधानीपूर्वक सोर्सिंग और उपयोगी गुणवत्ता को दर्शाती है।",
       },
       products: [
         {
           id: "grains-cereals",
-          title: "अनाज और सीरियल",
+          title: "ब्राउन राइस और होल ग्रेन्स",
           description:
-            "सावधानी से उगाए गए मुख्य खाद्य उत्पाद जो अपनी प्राकृतिक गुणवत्ता, ताजगी और स्थिरता बनाए रखते हैं।",
+            "दैनिक उपयोग के लिए पौष्टिक, फाइबर-समृद्ध और स्वाभाविक रूप से बेहतर अनाज, जो साफ-सुथरी किसान-आधारित सोर्सिंग से आते हैं।",
         },
         {
           id: "natural-agro-products",
-          title: "प्राकृतिक एग्रो उत्पाद",
+          title: "पौष्टिक मिलेट्स",
           description:
-            "खेतों से सीधे प्राप्त उत्पाद जिनमें न्यूनतम प्रोसेसिंग होती है और शुद्धता, ट्रेसेबिलिटी तथा भरोसे पर जोर दिया जाता है।",
+            "बाजरा, रागी, कुटकी, कंगनी और मिलेट-आधारित मिक्स—जो आधुनिक पोषण और हेल्दी जीवनशैली के लिए उपयुक्त हैं।",
         },
         {
           id: "value-added-products",
-          title: "वैल्यू-ऐडेड उत्पाद",
+          title: "मसाले और मसाला मिश्रण",
           description:
-            "दैनिक उपयोग, बेहतर पोषण और सुविधाजनक रसोई अनुभव के लिए सोच-समझकर तैयार किए गए उत्पाद।",
+            "हल्दी, लाल मिर्च, धनिया, जीरा, गरम मसाला और किचन ब्लेंड्स—जो शुद्ध स्वाद, सुगंध और आसान उपयोग के लिए पैक किए गए हैं।",
         },
       ],
       impactSection: {

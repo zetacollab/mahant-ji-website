@@ -53,3 +53,6 @@ I need a static website to showcase the info
 
 ## Founder Media Updates
 - Updated the founder spotlight to use the newly provided portrait as the primary image, with a cleaner framed treatment and earlier placement on mobile for stronger visual storytelling.
+
+## Product Media Updates
+- Replaced generic product visuals with the newly provided real product images for brown rice, nutritious millets, and spice/masala ranges, and aligned the product copy to match them.
