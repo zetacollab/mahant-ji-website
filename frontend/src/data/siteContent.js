@@ -97,7 +97,7 @@ export const siteContent = {
     hero:
       "https://images.unsplash.com/photo-1764277434161-23d72931335f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwyfHxhZ3JpY3VsdHVyZSUyMGxhbmRzY2FwZSUyMGZhcm0lMjBzdW5zZXR8ZW58MHx8fHwxNzc0ODk0ODA2fDA&ixlib=rb-4.1.0&q=85",
     aboutFarmer:
-      "https://images.pexels.com/photos/18620451/pexels-photo-18620451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "https://customer-assets.emergentagent.com/job_info-showcase-12/artifacts/gta6k5os_WhatsApp%20Image%202026-05-01%20at%2019.09.26%20%283%29.jpeg",
     aboutField:
       "https://images.pexels.com/photos/29912210/pexels-photo-29912210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     productBrownRice:
@@ -381,6 +381,11 @@ export const siteContent = {
         tagline: "Choose better. Support farmers. Live healthier.",
         supportingText:
           "Backed by Rupwara Marwan Fed Farmers Producer Company Limited",
+        linksTitle: "Quick links",
+        contactTitle: "Contact & social",
+        facebookLabel: "Facebook",
+        bottomLine: "Direct from farmers. Naturally grown. Honestly delivered.",
+        copyrightLine: "All rights reserved.",
       },
     },
     hi: {
@@ -645,6 +650,11 @@ export const siteContent = {
         tagline: "बेहतर चुनें। किसानों का साथ दें। स्वस्थ जीवन अपनाएँ।",
         supportingText:
           "रूपवाड़ा मड़वन फेड फार्मर्स प्रोड्यूसर कंपनी लिमिटेड द्वारा समर्थित",
+        linksTitle: "त्वरित लिंक",
+        contactTitle: "संपर्क और सोशल",
+        facebookLabel: "फेसबुक",
+        bottomLine: "किसानों से सीधे। प्राकृतिक रूप से उगाया गया। ईमानदारी से पहुँचाया गया।",
+        copyrightLine: "सर्वाधिकार सुरक्षित।",
       },
     },
   },

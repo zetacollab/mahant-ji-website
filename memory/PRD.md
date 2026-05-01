@@ -59,3 +59,7 @@ I need a static website to showcase the info
 
 ## Footer Updates
 - Upgraded the footer into a richer constant site-wide footer with quick links, contact details, a Facebook icon/link, and a stronger brand presentation.
+- Added Hindi footer notes for the site-wide footer while keeping Facebook as the only social link as requested.
+
+## About Page Media Updates
+- Replaced the About page supporting image with the newly provided event/leadership photo.

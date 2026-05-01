@@ -208,7 +208,7 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
 
             <div className="space-y-4">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4A373]" data-testid="footer-links-title">
-                Quick links
+                {copy.footer.linksTitle}
               </p>
               <div className="grid gap-3" data-testid="footer-links-list">
                 {copy.navigation.map((item, index) => (
@@ -226,7 +226,7 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
 
             <div className="space-y-4">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4A373]" data-testid="footer-contact-title">
-                Contact & social
+                {copy.footer.contactTitle}
               </p>
               <div className="grid gap-4">
                 <a
@@ -266,15 +266,15 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
                   target="_blank"
                 >
                   <Facebook className="h-4 w-4" />
-                  <span>Facebook</span>
+                  <span>{copy.footer.facebookLabel}</span>
                 </a>
               </div>
             </div>
           </div>
 
           <div className="flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
-            <p data-testid="footer-bottom-line">Direct from farmers. Naturally grown. Honestly delivered.</p>
-            <p data-testid="footer-copyright">© {new Date().getFullYear()} {siteContent.brand.name}</p>
+            <p data-testid="footer-bottom-line">{copy.footer.bottomLine}</p>
+            <p data-testid="footer-copyright">© {new Date().getFullYear()} {siteContent.brand.name}. {copy.footer.copyrightLine}</p>
           </div>
         </div>
       </footer>
