@@ -1,7 +1,9 @@
 import {
   AboutSection,
+  ContactPreviewSection,
   ContactSection,
   FounderSection,
+  FounderPreviewSection,
   HeroSection,
   ImpactSection,
   ProductsSection,
@@ -13,11 +15,11 @@ export const HomePage = ({ copy, language }) => (
   <main data-testid="home-page">
     <HeroSection copy={copy} />
     <AboutSection copy={copy} />
-    <FounderSection copy={copy} language={language} />
+    <FounderPreviewSection copy={copy} />
     <ProductsSection copy={copy} />
     <ImpactSection copy={copy} />
     <ValuesSection copy={copy} />
-    <ContactSection copy={copy} />
+    <ContactPreviewSection copy={copy} />
   </main>
 );
 

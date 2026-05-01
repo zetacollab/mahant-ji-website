@@ -1,0 +1,27 @@
+{
+  "summary": "Frontend-only regression testing completed on the public preview URL for homepage content-depth reduction. Homepage loads correctly with founder/contact preview sections, preview CTAs route correctly, and full founder/contact content remains available on dedicated routes across desktop and mobile.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [],
+  "updated_files": [
+    "/app/test_reports/iteration_8.json"
+  ],
+  "success_rate": {
+    "backend": "N/A (skipped by request)",
+    "frontend": "100%"
+  },
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Validated on https://info-showcase-12.preview.emergentagent.com. Confirmed on home: founder/contact full sections removed and replaced with FounderPreviewSection + ContactPreviewSection. Verified founder preview button -> /founder with full founder section (gallery cards + paragraphs) and contact preview button -> /contact with full form controls. Verified desktop + mobile navigation behavior and SEO route metadata presence (title/canonical/og:url/robots/structured-data) with canonical normalized to origin+pathname.",
+  "rca of the issue": "No regression issue reproduced in this scope."
+}

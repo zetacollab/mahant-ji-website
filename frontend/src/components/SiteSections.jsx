@@ -395,6 +395,56 @@ export const FounderSection = ({ copy, language }) => (
   </section>
 );
 
+export const FounderPreviewSection = ({ copy }) => {
+  const founderNavLabel = copy.navigation.find((item) => item.path === "/founder")?.label ?? "Founder";
+
+  return (
+    <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-18 lg:px-8 lg:py-24" data-testid="founder-preview-section">
+      <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+        <div className="overflow-hidden rounded-[2rem] border border-[#E2DFD9] bg-[linear-gradient(180deg,#f7f4ee_0%,#efe6d9_100%)] p-4 sm:p-6" data-testid="founder-preview-image-card">
+          <img
+            alt={copy.founder.title}
+            className="aspect-[4/4] h-full w-full object-contain"
+            data-testid="founder-preview-image"
+            decoding="async"
+            loading="lazy"
+            src={siteContent.media.founderPrimary}
+          />
+        </div>
+
+        <div className="space-y-6">
+          <SectionEyebrow testId="founder-preview-eyebrow">{copy.founder.eyebrow}</SectionEyebrow>
+          <div className="space-y-4">
+            <h2 className="max-w-3xl font-[Playfair_Display] text-3xl text-[#1A1A1A] sm:text-4xl lg:text-5xl" data-testid="founder-preview-title">
+              {copy.founder.title}
+            </h2>
+            <p className="max-w-3xl text-base leading-8 text-[#4A4A4A]" data-testid="founder-preview-subtitle">
+              {copy.founder.subtitle}
+            </p>
+            <p className="max-w-3xl text-base leading-8 text-[#4A4A4A]" data-testid="founder-preview-description">
+              {copy.founder.paragraphs[0]}
+            </p>
+          </div>
+
+          <div className="rounded-[1.75rem] border border-[#E2DFD9] bg-[#F9F8F6] p-6" data-testid="founder-preview-quote-card">
+            <p className="font-[Playfair_Display] text-2xl leading-relaxed text-[#1A1A1A]" data-testid="founder-preview-quote-text">
+              “{copy.founder.quote}”
+            </p>
+          </div>
+
+          <Button
+            asChild
+            className="h-12 rounded-full bg-[#2C402E] px-6 text-[#F9F8F6] hover:bg-[#1f2d20]"
+            data-testid="founder-preview-button"
+          >
+            <Link to="/founder">{founderNavLabel}</Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export const ProductsSection = ({ copy }) => (
   <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-18 lg:px-8 lg:py-28" data-testid="products-section" id="products">
     <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
@@ -648,6 +698,87 @@ export const ContactSection = ({ copy }) => {
         </div>
 
         <ContactForm content={copy.contactForm} />
+      </div>
+    </section>
+  );
+};
+
+export const ContactPreviewSection = ({ copy }) => {
+  const contactItems = [
+    {
+      id: "phone",
+      label: copy.contactSection.labels.phone,
+      value: siteContent.contact.phone,
+      href: `tel:${siteContent.contact.phone.replace(/\s+/g, "")}`,
+      Icon: Phone,
+    },
+    {
+      id: "email",
+      label: copy.contactSection.labels.email,
+      value: siteContent.contact.email,
+      href: `mailto:${siteContent.contact.email}`,
+      Icon: Mail,
+    },
+    {
+      id: "address",
+      label: copy.contactSection.labels.address,
+      value: siteContent.contact.address,
+      href: "https://maps.google.com/?q=Rupwara,+Muzaffarpur,+Bihar,+India",
+      Icon: MapPin,
+    },
+  ];
+
+  return (
+    <section className="bg-[#EFECE7] py-14 sm:py-20 lg:py-24" data-testid="contact-preview-section">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8">
+        <div className="space-y-5">
+          <SectionEyebrow testId="contact-preview-eyebrow">{copy.contactSection.eyebrow}</SectionEyebrow>
+          <h2 className="max-w-3xl font-[Playfair_Display] text-3xl text-[#1A1A1A] sm:text-4xl lg:text-5xl" data-testid="contact-preview-title">
+            {copy.contactSection.title}
+          </h2>
+          <p className="max-w-2xl text-base leading-8 text-[#4A4A4A]" data-testid="contact-preview-description">
+            {copy.contactSection.description}
+          </p>
+
+          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+            {contactItems.map((item) => (
+              <ContactItem item={item} key={item.id} />
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-[2rem] border border-[#d9d2c6] bg-[#F9F8F6] p-6 shadow-[0_24px_80px_rgba(44,64,46,0.08)] md:p-8" data-testid="contact-preview-cta-card">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9E4723]" data-testid="contact-preview-cta-eyebrow">
+            {copy.headerCta}
+          </p>
+          <h3 className="mt-4 font-[Playfair_Display] text-3xl text-[#1A1A1A]" data-testid="contact-preview-cta-title">
+            {copy.contactForm.title}
+          </h3>
+          <p className="mt-4 text-base leading-8 text-[#4A4A4A]" data-testid="contact-preview-cta-text">
+            {copy.contactForm.note}
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-3">
+            {siteContent.contact.farmerSupport.map((number, index) => (
+              <a
+                className="rounded-full border border-[#d9d2c6] bg-white px-4 py-3 text-sm text-[#1A1A1A] transition hover:border-[#2C402E] hover:text-[#2C402E]"
+                data-testid={`contact-preview-support-number-${index + 1}`}
+                href={`tel:${number}`}
+                key={number}
+              >
+                {number}
+              </a>
+            ))}
+          </div>
+
+          <Button
+            asChild
+            className="mt-8 h-12 rounded-full bg-[#2C402E] px-6 text-[#F9F8F6] hover:bg-[#1f2d20]"
+            data-testid="contact-preview-button"
+          >
+            <Link to="/contact">{copy.headerCta}</Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
