@@ -1,5 +1,7 @@
+import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { siteContent } from "@/data/siteContent";
@@ -13,6 +15,11 @@ const languageButtonClass = (active) =>
 
 export const SiteLayout = ({ copy, language, setLanguage }) => {
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
 
   return (
     <div className="min-h-screen bg-[var(--page-bg)] text-[#1A1A1A]">
@@ -90,14 +97,84 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
 
             <Button
               asChild
-              className="hidden rounded-full bg-[#2C402E] px-6 text-[#F9F8F6] hover:bg-[#1f2d20] sm:inline-flex"
+              className="hidden rounded-full bg-[#2C402E] px-6 text-[#F9F8F6] hover:bg-[#1f2d20] md:inline-flex"
               data-testid="header-contact-button"
             >
               <Link to="/contact">{copy.headerCta}</Link>
             </Button>
+
+            <button
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-[#d9d2c6] bg-white text-[#1A1A1A] shadow-sm transition hover:border-[#2C402E] hover:text-[#2C402E] md:hidden"
+              data-testid="mobile-menu-trigger"
+              onClick={() => setMenuOpen(true)}
+              type="button"
+            >
+              <Menu className="h-5 w-5" />
+            </button>
           </div>
         </div>
       </header>
+
+      {menuOpen ? (
+        <div className="fixed inset-0 z-[70] md:hidden" data-testid="mobile-menu-overlay">
+          <button
+            aria-label="Close mobile menu overlay"
+            className="absolute inset-0 bg-black/40"
+            data-testid="mobile-menu-backdrop"
+            onClick={() => setMenuOpen(false)}
+            type="button"
+          />
+
+          <div
+            className="absolute right-0 top-0 flex h-full w-[84%] max-w-sm flex-col border-l border-[#E2DFD9] bg-[#F9F8F6] shadow-2xl"
+            data-testid="mobile-menu-panel"
+          >
+            <div className="flex items-start justify-between border-b border-[#E2DFD9] px-6 py-6">
+              <div>
+                <p className="font-[Playfair_Display] text-2xl text-[#1A1A1A]" data-testid="mobile-menu-title">
+                  {siteContent.brand.name}
+                </p>
+                <p className="text-sm uppercase tracking-[0.16em] text-[#4A4A4A]" data-testid="mobile-menu-location">
+                  {siteContent.brand.location[language]}
+                </p>
+              </div>
+
+              <button
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-[#d9d2c6] bg-white text-[#1A1A1A]"
+                data-testid="mobile-menu-close"
+                onClick={() => setMenuOpen(false)}
+                type="button"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            <div className="flex flex-1 flex-col overflow-y-auto px-6 py-6">
+              <nav className="flex flex-col gap-3" data-testid="mobile-navigation">
+                {copy.navigation.map((item, index) => {
+                  const isActive = location.pathname === item.path;
+
+                  return (
+                    <Link
+                      className={`rounded-[1.25rem] border px-4 py-4 text-base font-semibold transition ${
+                        isActive
+                          ? "border-[#2C402E] bg-[#2C402E] text-[#F9F8F6]"
+                          : "border-[#E2DFD9] bg-white text-[#1A1A1A] hover:border-[#2C402E] hover:text-[#2C402E]"
+                      }`}
+                      data-testid={`mobile-nav-link-${index + 1}`}
+                      key={`${language}-mobile-${item.label}`}
+                      onClick={() => setMenuOpen(false)}
+                      to={item.path}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
+              </nav>
+            </div>
+          </div>
+        </div>
+      ) : null}
 
       <Outlet />
 

@@ -42,3 +42,6 @@ I need a static website to showcase the info
 
 ## Recent UI Tweaks
 - Improved hero eyebrow text contrast on the image banner by replacing the low-visibility orange with a lighter cream tone and subtle shadow for better readability in Hindi and English.
+
+## Mobile UX Updates
+- Added a mobile hamburger menu with all navigation options, keeping route-based navigation usable on phone screens.
