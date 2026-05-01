@@ -4,40 +4,36 @@
 I need a static website to showcase the info
 
 ## Architecture Decisions
-- Built a responsive one-page React marketing website tailored to the uploaded agriculture/company PDFs.
+- Built a responsive React marketing website tailored to the uploaded agriculture/company PDFs and later evolved it into a multi-page site.
 - Used the existing FastAPI backend to support a real contact inquiry submission flow via `/api/inquiries`.
 - Kept MongoDB usage minimal and safe by storing inquiry submissions without exposing Mongo `_id` values in responses.
-- Followed the generated design direction: light organic earthy theme, image-led storytelling, and strong farmer-impact sections.
+- Followed a light organic earthy visual direction with image-led storytelling and strong farmer-impact sections.
 - Added bilingual content switching directly in the frontend so visitors can toggle between English and Hindi without page reloads.
-- Added a dedicated founder section within the main one-page experience, which best fits the current site structure while keeping founder storytelling highly visible.
+- Restructured the navigation into dedicated route pages so each nav item now opens a separate page while still preserving a rich homepage.
 
 ## What’s Implemented
-- Branded hero section for Ruwan Agro with updated logo, latest address details, and improved text contrast.
-- Full bilingual English/Hindi experience across navigation, hero, about, founder, products, impact, why choose us, contact, footer, and contact form copy.
-- Language toggle in the header for instant switching between English and Hindi.
-- About section blending Ruwan Agro brand story with Rupwara Marwan Fed FPO foundation and mission/vision.
-- Dedicated founder section for Mahant Mritunjay Das (Mritunjay Kumar) with biography, quote, milestones, focus areas, founder address details, and gallery using uploaded real photos.
-- Products overview section for grains & cereals, natural agro products, and value-added products.
-- Farmer impact section with marquee treatment and key stats.
-- Sustainability / why choose us section with value cards and core values.
-- Contact section with address, phone, email, website, farmer support numbers, and a working inquiry form.
-- Backend API endpoint: `POST /api/inquiries` plus existing root API health response.
-- Localized contact form labels/placeholders/toasts for both languages.
+- Branded homepage with hero, about, founder, products, impact, values, and contact sections.
+- Full bilingual English/Hindi experience across navigation, page content, founder story, footer, and contact form copy.
+- Real multi-page navigation with dedicated routes for About, Founder, Products, Impact, and Contact.
+- Shared site layout with persistent header, language toggle, logo, and footer across all pages.
+- Dedicated founder section for Mahant Mritunjay Das (Mritunjay Kumar) with biography, quote, milestones, focus areas, address details, and gallery using uploaded photos.
+- Contact page with a working inquiry form and backend API support.
+- Improved hero text contrast and cleaned repeated intro duplication on route pages.
 
 ## Prioritized Backlog
 ### P0
-- Replace remaining stock brand imagery with more official business/farm/product visuals.
+- Replace remaining stock imagery with more official business/farm/product visuals.
 - Review and approve all bilingual copy, especially founder wording and Hindi phrasing.
 
 ### P1
-- Add a dedicated gallery/news section using approved company photos and press mentions.
+- Add a dedicated gallery/news page using approved company photos and press mentions.
 - Add map embed and richer partnership CTA blocks.
 - Add downloadable bilingual brochure/PDF section.
 
 ### P2
 - Add testimonials, certifications, and partner logos.
+- Further split the large section file into smaller reusable components for easier long-term maintenance.
 - Add simple CMS/admin editing flow for future content updates.
-- Refactor the homepage into smaller section components for easier long-term maintenance.
 
 ## Next Tasks
 - Finalize approved English and Hindi content.
