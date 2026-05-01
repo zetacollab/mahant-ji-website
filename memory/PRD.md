@@ -9,12 +9,14 @@ I need a static website to showcase the info
 - Kept MongoDB usage minimal and safe by storing inquiry submissions without exposing Mongo `_id` values in responses.
 - Followed the generated design direction: light organic earthy theme, image-led storytelling, and strong farmer-impact sections.
 - Added bilingual content switching directly in the frontend so visitors can toggle between English and Hindi without page reloads.
+- Added a dedicated founder section within the main one-page experience, which best fits the current site structure while keeping founder storytelling highly visible.
 
 ## What’s Implemented
-- Branded hero section for Ruwan Agro with updated logo, latest address details, and trust/impact highlights.
-- Full bilingual English/Hindi experience across navigation, hero, about, products, impact, why choose us, contact, footer, and contact form copy.
+- Branded hero section for Ruwan Agro with updated logo, latest address details, and improved text contrast.
+- Full bilingual English/Hindi experience across navigation, hero, about, founder, products, impact, why choose us, contact, footer, and contact form copy.
 - Language toggle in the header for instant switching between English and Hindi.
 - About section blending Ruwan Agro brand story with Rupwara Marwan Fed FPO foundation and mission/vision.
+- Dedicated founder section for Mahant Mritunjay Das (Mritunjay Kumar) with biography, quote, milestones, focus areas, founder address details, and gallery using uploaded real photos.
 - Products overview section for grains & cereals, natural agro products, and value-added products.
 - Farmer impact section with marquee treatment and key stats.
 - Sustainability / why choose us section with value cards and core values.
@@ -24,21 +26,21 @@ I need a static website to showcase the info
 
 ## Prioritized Backlog
 ### P0
-- Replace stock imagery with official brand/farm/product photos from the business.
-- Confirm final bilingual brand copy and approve the Hindi wording.
+- Replace remaining stock brand imagery with more official business/farm/product visuals.
+- Review and approve all bilingual copy, especially founder wording and Hindi phrasing.
 
 ### P1
 - Add a dedicated gallery/news section using approved company photos and press mentions.
 - Add map embed and richer partnership CTA blocks.
-- Add bilingual downloadable brochure/PDF section.
+- Add downloadable bilingual brochure/PDF section.
 
 ### P2
 - Add testimonials, certifications, and partner logos.
 - Add simple CMS/admin editing flow for future content updates.
-- Modularize the homepage into smaller section components for easier long-term maintenance.
+- Refactor the homepage into smaller section components for easier long-term maintenance.
 
 ## Next Tasks
-- Finalize brand-approved English and Hindi copy.
+- Finalize approved English and Hindi content.
 - Expand product details and add real SKU-level product cards if needed.
 - Add gallery, press, and downloadable materials once assets are approved.
 
