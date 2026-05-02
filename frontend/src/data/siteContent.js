@@ -15,6 +15,7 @@ export const siteContent = {
     },
     email: "ruwanagro26@gmail.com",
     phone: "+91 91554 17338",
+    whatsapp: "9155417338",
     farmerSupport: ["9304777460", "9661361212"],
     website: "https://ruwanagro.com",
   },
@@ -403,6 +404,11 @@ export const siteContent = {
           "Thanks for reaching out. Our team will contact you soon.",
         errorToast:
           "We couldn’t send your message right now. Please try again.",
+        directTitle: "Connect with us directly.",
+        directDescription:
+          "For faster communication, reach us directly on WhatsApp or email and our team will respond quickly.",
+        whatsappLabel: "WhatsApp us",
+        emailLabel: "Email us",
       },
       footer: {
         tagline: "Choose better. Support farmers. Live healthier.",
@@ -666,6 +672,11 @@ export const siteContent = {
           "संपर्क करने के लिए धन्यवाद। हमारी टीम जल्द ही आपसे संपर्क करेगी।",
         errorToast:
           "अभी आपका संदेश नहीं भेजा जा सका। कृपया फिर से प्रयास करें।",
+        directTitle: "सीधे हमसे जुड़ें।",
+        directDescription:
+          "तेज़ संवाद के लिए आप सीधे WhatsApp या ईमेल के माध्यम से हमसे संपर्क कर सकते हैं। हमारी टीम शीघ्र उत्तर देगी।",
+        whatsappLabel: "व्हाट्सऐप करें",
+        emailLabel: "ईमेल करें",
       },
       footer: {
         tagline: "बेहतर चुनें। किसानों का साथ दें। स्वस्थ जीवन अपनाएँ।",
