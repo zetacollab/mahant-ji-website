@@ -77,3 +77,6 @@ I need a static website to showcase the info
 ## Image Optimization Updates
 - Generated and switched to optimized local WEBP assets for the heaviest uploaded custom images (logo, founder, gallery, about image, and product packaging) to reduce transfer size and improve Lighthouse consistency.
 - Localized the remaining external hero, about-field, and sustainability images into optimized local WEBP assets so the site no longer depends on those third-party image hosts for key visuals.
+
+## Codebase Cleanup Updates
+- Split the former large `SiteSections.jsx` into smaller section modules under `src/components/sections/` and converted the original file into a lightweight barrel export for easier maintenance.
