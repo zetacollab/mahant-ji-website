@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { Facebook, Mail, MapPin, Menu, Phone, X } from "lucide-react";
+import { Facebook, Mail, MapPin, Menu, MessageCircle, Phone, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { siteContent } from "@/data/siteContent";
@@ -255,6 +255,17 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
               <Link to="/contact">{copy.headerCta}</Link>
             </Button>
 
+            <a
+              className="hidden h-12 items-center gap-2 rounded-full border border-[#cfe7d5] bg-[#e8f7ec] px-5 text-sm font-semibold text-[#1f8f47] transition hover:bg-[#d8f0de] lg:inline-flex"
+              data-testid="header-whatsapp-link"
+              href="https://wa.me/919155417338"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <MessageCircle className="h-4 w-4" />
+              <span>WhatsApp</span>
+            </a>
+
             <button
               className="flex h-12 w-12 items-center justify-center rounded-full border border-[#d9d2c6] bg-white text-[#1A1A1A] shadow-sm transition hover:border-[#2C402E] hover:text-[#2C402E] md:hidden"
               data-testid="mobile-menu-trigger"
@@ -410,6 +421,17 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
                 >
                   <Mail className="h-4 w-4 shrink-0" />
                   <span>{siteContent.contact.email}</span>
+                </a>
+
+                <a
+                  className="inline-flex h-12 w-fit items-center gap-3 rounded-full border border-[#52b66d]/30 bg-[#1f8f47] px-5 text-sm font-semibold text-white transition hover:bg-[#18753a]"
+                  data-testid="footer-whatsapp-link"
+                  href="https://wa.me/919155417338"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  <span>WhatsApp</span>
                 </a>
 
                 <a

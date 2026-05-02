@@ -89,3 +89,4 @@ I need a static website to showcase the info
 
 ## Contact Experience Updates
 - Replaced the full contact form on the Contact page with direct WhatsApp and email contact cards using the provided WhatsApp number and existing email address.
+- Added quick WhatsApp buttons in both the header and footer for faster direct access to the business contact number.
