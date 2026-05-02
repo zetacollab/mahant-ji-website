@@ -342,13 +342,14 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
       <Outlet />
 
       <a
-        className="fixed bottom-5 right-5 z-[65] inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#1f8f47] text-white shadow-[0_18px_40px_rgba(31,143,71,0.35)] transition hover:bg-[#18753a] md:hidden"
+        className="fixed bottom-5 right-5 z-[65] inline-flex h-14 items-center gap-2 rounded-full bg-[#1f8f47] px-4 text-white shadow-[0_18px_40px_rgba(31,143,71,0.35)] transition hover:bg-[#18753a]"
         data-testid="floating-whatsapp-button"
         href="https://wa.me/919155417338"
         rel="noreferrer"
         target="_blank"
       >
         <MessageCircle className="h-6 w-6" />
+        <span className="text-sm font-semibold" data-testid="floating-whatsapp-label">WhatsApp</span>
       </a>
 
       <footer className="bg-[#2C402E] px-4 py-10 text-[#F9F8F6] sm:px-6 lg:px-8" data-testid="site-footer">
