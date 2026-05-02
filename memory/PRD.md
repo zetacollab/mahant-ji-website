@@ -76,3 +76,4 @@ I need a static website to showcase the info
 
 ## Image Optimization Updates
 - Generated and switched to optimized local WEBP assets for the heaviest uploaded custom images (logo, founder, gallery, about image, and product packaging) to reduce transfer size and improve Lighthouse consistency.
+- Localized the remaining external hero, about-field, and sustainability images into optimized local WEBP assets so the site no longer depends on those third-party image hosts for key visuals.
