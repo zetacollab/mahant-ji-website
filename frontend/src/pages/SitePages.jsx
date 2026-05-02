@@ -61,11 +61,11 @@ export const ContactPage = ({ copy, language }) => (
   </main>
 );
 
-export const TeamPage = ({ copy }) => (
+export const TeamPage = ({ copy, language }) => (
   <main data-testid="team-page">
     <h1 className="sr-only" data-testid="team-page-heading">
       {copy.team.title}
     </h1>
-    <TeamSection copy={copy} />
+    <TeamSection copy={copy} language={language} />
   </main>
 );
