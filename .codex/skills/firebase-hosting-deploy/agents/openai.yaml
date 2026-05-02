@@ -1,0 +1,4 @@
+interface:
+  display_name: "Firebase Hosting Deploy"
+  short_description: "Build and deploy this repo to Firebase"
+  default_prompt: "Use $firebase-hosting-deploy to build and deploy the current frontend to Firebase Hosting."
