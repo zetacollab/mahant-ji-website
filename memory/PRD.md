@@ -80,3 +80,6 @@ I need a static website to showcase the info
 
 ## Codebase Cleanup Updates
 - Split the former large `SiteSections.jsx` into smaller section modules under `src/components/sections/` and converted the original file into a lightweight barrel export for easier maintenance.
+
+## Content Updates
+- Updated the displayed address across brand, contact, founder, team, and map-link references to Repura, Muzaffarpur, Bihar 843113 where applicable.

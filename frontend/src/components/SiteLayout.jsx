@@ -386,7 +386,7 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
                 <a
                   className="flex items-start gap-3 text-sm text-white/80 transition hover:text-white"
                   data-testid="footer-address-link"
-                  href="https://maps.google.com/?q=Rupwara,+Muzaffarpur,+Bihar,+India"
+                  href="https://maps.google.com/?q=Repura,+Muzaffarpur,+Bihar+843113"
                   rel="noreferrer"
                   target="_blank"
                 >
