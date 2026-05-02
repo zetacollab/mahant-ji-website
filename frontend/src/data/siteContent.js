@@ -95,11 +95,11 @@ export const siteContent = {
   },
   media: {
     hero:
-      "https://images.unsplash.com/photo-1764277434161-23d72931335f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwyfHxhZ3JpY3VsdHVyZSUyMGxhbmRzY2FwZSUyMGZhcm0lMjBzdW5zZXR8ZW58MHx8fHwxNzc0ODk0ODA2fDA&ixlib=rb-4.1.0&q=85",
+      "/optimized/hero.webp",
     aboutFarmer:
       "/optimized/about-farmer.webp",
     aboutField:
-      "https://images.pexels.com/photos/29912210/pexels-photo-29912210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "/optimized/about-field.webp",
     productBrownRice:
       "/optimized/product-brown-rice.webp",
     productMillets:
@@ -107,7 +107,7 @@ export const siteContent = {
     productSpices:
       "/optimized/product-spices.webp",
     sustainability:
-      "https://images.pexels.com/photos/33786776/pexels-photo-33786776.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "/optimized/sustainability.webp",
     founderPrimary:
       "/optimized/founder-primary.webp",
     founderGallery: [
