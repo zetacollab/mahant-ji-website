@@ -9,7 +9,10 @@ export const siteContent = {
     logo: "/optimized/logo.webp",
   },
   contact: {
-    address: "Repura, Muzaffarpur, Bihar 843113",
+    address: {
+      en: "Repura, Muzaffarpur, Bihar 843113",
+      hi: "रेपुरा, मुजफ्फरपुर, बिहार 843113",
+    },
     email: "ruwanagro26@gmail.com",
     phone: "+91 91554 17338",
     farmerSupport: ["9304777460", "9661361212"],

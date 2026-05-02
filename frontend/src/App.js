@@ -32,7 +32,7 @@ function App() {
             <Route path="/team" element={<TeamPage copy={copy} />} />
             <Route path="/products" element={<ProductsPage copy={copy} />} />
             <Route path="/impact" element={<Navigate replace to="/about" />} />
-            <Route path="/contact" element={<ContactPage copy={copy} />} />
+            <Route path="/contact" element={<ContactPage copy={copy} language={language} />} />
           </Route>
         </Routes>
       </BrowserRouter>

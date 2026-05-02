@@ -72,9 +72,9 @@ export const TeamSection = ({ copy }) => (
   </section>
 );
 
-export const ContactSection = ({ copy }) => {
+export const ContactSection = ({ copy, language }) => {
   const contactItems = [
-    { id: "address", label: copy.contactSection.labels.address, value: siteContent.contact.address, href: "https://maps.google.com/?q=Repura,+Muzaffarpur,+Bihar+843113", Icon: MapPin },
+    { id: "address", label: copy.contactSection.labels.address, value: siteContent.contact.address[language], href: "https://maps.google.com/?q=Repura,+Muzaffarpur,+Bihar+843113", Icon: MapPin },
     { id: "phone", label: copy.contactSection.labels.phone, value: siteContent.contact.phone, href: `tel:${siteContent.contact.phone.replace(/\s+/g, "")}`, Icon: Phone },
     { id: "email", label: copy.contactSection.labels.email, value: siteContent.contact.email, href: `mailto:${siteContent.contact.email}`, Icon: Mail },
     { id: "website", label: copy.contactSection.labels.website, value: siteContent.brand.website, href: siteContent.contact.website, Icon: Globe },
@@ -112,11 +112,11 @@ export const ContactSection = ({ copy }) => {
   );
 };
 
-export const ContactPreviewSection = ({ copy }) => {
+export const ContactPreviewSection = ({ copy, language }) => {
   const contactItems = [
     { id: "phone", label: copy.contactSection.labels.phone, value: siteContent.contact.phone, href: `tel:${siteContent.contact.phone.replace(/\s+/g, "")}`, Icon: Phone },
     { id: "email", label: copy.contactSection.labels.email, value: siteContent.contact.email, href: `mailto:${siteContent.contact.email}`, Icon: Mail },
-    { id: "address", label: copy.contactSection.labels.address, value: siteContent.contact.address, href: "https://maps.google.com/?q=Repura,+Muzaffarpur,+Bihar+843113", Icon: MapPin },
+    { id: "address", label: copy.contactSection.labels.address, value: siteContent.contact.address[language], href: "https://maps.google.com/?q=Repura,+Muzaffarpur,+Bihar+843113", Icon: MapPin },
   ];
 
   return (
