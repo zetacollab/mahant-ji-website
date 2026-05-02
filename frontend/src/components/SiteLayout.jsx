@@ -341,6 +341,16 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
 
       <Outlet />
 
+      <a
+        className="fixed bottom-5 right-5 z-[65] inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#1f8f47] text-white shadow-[0_18px_40px_rgba(31,143,71,0.35)] transition hover:bg-[#18753a] md:hidden"
+        data-testid="floating-whatsapp-button"
+        href="https://wa.me/919155417338"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <MessageCircle className="h-6 w-6" />
+      </a>
+
       <footer className="bg-[#2C402E] px-4 py-10 text-[#F9F8F6] sm:px-6 lg:px-8" data-testid="site-footer">
         <div className="mx-auto max-w-7xl space-y-10">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.7fr_0.8fr]">
