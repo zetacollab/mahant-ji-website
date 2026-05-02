@@ -19,7 +19,7 @@ export const HomePage = ({ copy, language }) => (
     <ProductsSection copy={copy} />
     <ImpactSection copy={copy} />
     <ValuesSection copy={copy} />
-    <ContactPreviewSection copy={copy} />
+    <ContactPreviewSection copy={copy} language={language} />
   </main>
 );
 
@@ -52,20 +52,20 @@ export const ProductsPage = ({ copy }) => (
   </main>
 );
 
-export const ContactPage = ({ copy }) => (
+export const ContactPage = ({ copy, language }) => (
   <main data-testid="contact-page">
     <h1 className="sr-only" data-testid="contact-page-heading">
       {copy.contactSection.title}
     </h1>
-    <ContactSection copy={copy} />
+    <ContactSection copy={copy} language={language} />
   </main>
 );
 
-export const TeamPage = ({ copy }) => (
+export const TeamPage = ({ copy, language }) => (
   <main data-testid="team-page">
     <h1 className="sr-only" data-testid="team-page-heading">
       {copy.team.title}
     </h1>
-    <TeamSection copy={copy} />
+    <TeamSection copy={copy} language={language} />
   </main>
 );

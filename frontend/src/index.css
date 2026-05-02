@@ -148,4 +148,60 @@ code {
         border-top-color: inherit;
         border-bottom-color: inherit;
     }
+
+    html[lang="hi"] [class*="tracking-"] {
+        letter-spacing: 0 !important;
+        word-spacing: normal !important;
+    }
+
+    html[lang="hi"] [class*="uppercase"] {
+        text-transform: none !important;
+    }
+
+    html[lang="hi"] body,
+    html[lang="hi"] p,
+    html[lang="hi"] a,
+    html[lang="hi"] button,
+    html[lang="hi"] input,
+    html[lang="hi"] textarea,
+    html[lang="hi"] span,
+    html[lang="hi"] li,
+    html[lang="hi"] label,
+    html[lang="hi"] div {
+        font-family: "Noto Sans Devanagari", sans-serif !important;
+        font-kerning: normal;
+        text-rendering: optimizeLegibility;
+    }
+
+    html[lang="hi"] h1,
+    html[lang="hi"] h2,
+    html[lang="hi"] h3,
+    html[lang="hi"] h4,
+    html[lang="hi"] h5,
+    html[lang="hi"] h6,
+    html[lang="hi"] [class*="font-[Playfair_Display]"] {
+        font-family: "Noto Serif Devanagari", serif !important;
+        font-kerning: normal;
+        text-rendering: optimizeLegibility;
+    }
+
+    html[lang="hi"] p,
+    html[lang="hi"] a,
+    html[lang="hi"] span,
+    html[lang="hi"] li,
+    html[lang="hi"] label,
+    html[lang="hi"] button,
+    html[lang="hi"] input,
+    html[lang="hi"] textarea {
+        line-height: 1.7 !important;
+    }
+
+    html[lang="hi"] h1,
+    html[lang="hi"] h2,
+    html[lang="hi"] h3,
+    html[lang="hi"] h4,
+    html[lang="hi"] h5,
+    html[lang="hi"] h6 {
+        line-height: 1.35 !important;
+    }
 }

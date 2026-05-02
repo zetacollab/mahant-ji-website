@@ -391,7 +391,7 @@ export const SiteLayout = ({ copy, language, setLanguage }) => {
                   target="_blank"
                 >
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
-                  <span>{siteContent.contact.address}</span>
+                  <span>{siteContent.contact.address[language]}</span>
                 </a>
 
                 <a

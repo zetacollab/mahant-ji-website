@@ -29,10 +29,10 @@ function App() {
             <Route path="/" element={<HomePage copy={copy} language={language} />} />
             <Route path="/about" element={<AboutPage copy={copy} />} />
             <Route path="/founder" element={<FounderPage copy={copy} language={language} />} />
-            <Route path="/team" element={<TeamPage copy={copy} />} />
+            <Route path="/team" element={<TeamPage copy={copy} language={language} />} />
             <Route path="/products" element={<ProductsPage copy={copy} />} />
             <Route path="/impact" element={<Navigate replace to="/about" />} />
-            <Route path="/contact" element={<ContactPage copy={copy} />} />
+            <Route path="/contact" element={<ContactPage copy={copy} language={language} />} />
           </Route>
         </Routes>
       </BrowserRouter>

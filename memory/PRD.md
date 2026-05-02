@@ -83,3 +83,6 @@ I need a static website to showcase the info
 
 ## Content Updates
 - Updated the displayed address across brand, contact, founder, team, and map-link references to Repura, Muzaffarpur, Bihar 843113 where applicable.
+
+## Hindi Typography Updates
+- Added sitewide Hindi typography overrides so Devanagari text no longer breaks apart from English letter-spacing/uppercase styles, and heading/body fonts render more naturally in Hindi mode.

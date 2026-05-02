@@ -7,7 +7,7 @@ import { siteContent } from "@/data/siteContent";
 
 import { ContactItem, SectionEyebrow } from "./shared";
 
-export const TeamSection = ({ copy }) => (
+export const TeamSection = ({ copy, language }) => (
   <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-18 lg:px-8 lg:py-28" data-testid="team-section">
     <div className="space-y-8">
       <div className="space-y-4">
@@ -57,7 +57,7 @@ export const TeamSection = ({ copy }) => (
             <div className="mt-5 space-y-4">
               <div data-testid={`team-member-location-block-${member.id}`}>
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4A4A4A]">{copy.team.locationLabel}</p>
-                <p className="mt-1 text-sm leading-7 text-[#1A1A1A]" data-testid={`team-member-location-${member.id}`}>{member.location}</p>
+                <p className="mt-1 text-sm leading-7 text-[#1A1A1A]" data-testid={`team-member-location-${member.id}`}>{member.location[language]}</p>
               </div>
 
               <div data-testid={`team-member-email-block-${member.id}`}>
@@ -72,9 +72,9 @@ export const TeamSection = ({ copy }) => (
   </section>
 );
 
-export const ContactSection = ({ copy }) => {
+export const ContactSection = ({ copy, language }) => {
   const contactItems = [
-    { id: "address", label: copy.contactSection.labels.address, value: siteContent.contact.address, href: "https://maps.google.com/?q=Repura,+Muzaffarpur,+Bihar+843113", Icon: MapPin },
+    { id: "address", label: copy.contactSection.labels.address, value: siteContent.contact.address[language], href: "https://maps.google.com/?q=Repura,+Muzaffarpur,+Bihar+843113", Icon: MapPin },
     { id: "phone", label: copy.contactSection.labels.phone, value: siteContent.contact.phone, href: `tel:${siteContent.contact.phone.replace(/\s+/g, "")}`, Icon: Phone },
     { id: "email", label: copy.contactSection.labels.email, value: siteContent.contact.email, href: `mailto:${siteContent.contact.email}`, Icon: Mail },
     { id: "website", label: copy.contactSection.labels.website, value: siteContent.brand.website, href: siteContent.contact.website, Icon: Globe },
@@ -112,11 +112,11 @@ export const ContactSection = ({ copy }) => {
   );
 };
 
-export const ContactPreviewSection = ({ copy }) => {
+export const ContactPreviewSection = ({ copy, language }) => {
   const contactItems = [
     { id: "phone", label: copy.contactSection.labels.phone, value: siteContent.contact.phone, href: `tel:${siteContent.contact.phone.replace(/\s+/g, "")}`, Icon: Phone },
     { id: "email", label: copy.contactSection.labels.email, value: siteContent.contact.email, href: `mailto:${siteContent.contact.email}`, Icon: Mail },
-    { id: "address", label: copy.contactSection.labels.address, value: siteContent.contact.address, href: "https://maps.google.com/?q=Repura,+Muzaffarpur,+Bihar+843113", Icon: MapPin },
+    { id: "address", label: copy.contactSection.labels.address, value: siteContent.contact.address[language], href: "https://maps.google.com/?q=Repura,+Muzaffarpur,+Bihar+843113", Icon: MapPin },
   ];
 
   return (
