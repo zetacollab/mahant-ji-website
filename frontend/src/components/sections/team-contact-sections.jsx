@@ -1,7 +1,6 @@
 import { Globe, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import { ContactForm } from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
 import { siteContent } from "@/data/siteContent";
 
@@ -106,7 +105,55 @@ export const ContactSection = ({ copy, language }) => {
           </div>
         </div>
 
-        <ContactForm content={copy.contactForm} />
+        <div className="space-y-6 rounded-[2rem] border border-[#d9d2c6] bg-[#F9F8F6] p-6 shadow-[0_24px_80px_rgba(44,64,46,0.08)] md:p-8" data-testid="contact-direct-card">
+          <div className="space-y-3">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9E4723]" data-testid="contact-direct-eyebrow">
+              {copy.contactForm.eyebrow}
+            </p>
+            <h3 className="font-[Playfair_Display] text-3xl text-[#1A1A1A]" data-testid="contact-direct-title">
+              {copy.contactForm.directTitle}
+            </h3>
+            <p className="text-base leading-8 text-[#4A4A4A]" data-testid="contact-direct-description">
+              {copy.contactForm.directDescription}
+            </p>
+          </div>
+
+          <a
+            className="flex items-center justify-between rounded-[1.5rem] border border-[#d9d2c6] bg-white px-5 py-4 transition hover:border-[#2C402E]"
+            data-testid="contact-whatsapp-link"
+            href="https://wa.me/919155417338"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#9E4723]">
+                {copy.contactForm.whatsappLabel}
+              </p>
+              <p className="mt-1 text-lg font-semibold text-[#1A1A1A]">+91 91554 17338</p>
+            </div>
+            <Phone className="h-5 w-5 text-[#2C402E]" />
+          </a>
+
+          <a
+            className="flex items-center justify-between rounded-[1.5rem] border border-[#d9d2c6] bg-white px-5 py-4 transition hover:border-[#2C402E]"
+            data-testid="contact-email-direct-link"
+            href={`mailto:${siteContent.contact.email}`}
+          >
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#9E4723]">
+                {copy.contactForm.emailLabel}
+              </p>
+              <p className="mt-1 break-all text-lg font-semibold text-[#1A1A1A]">{siteContent.contact.email}</p>
+            </div>
+            <Mail className="h-5 w-5 text-[#2C402E]" />
+          </a>
+
+          <div className="rounded-[1.5rem] border border-[#E2DFD9] bg-[#EFECE7] p-5" data-testid="contact-direct-note-card">
+            <p className="text-sm leading-7 text-[#4A4A4A]" data-testid="contact-direct-note-text">
+              {copy.contactForm.note}
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -86,3 +86,9 @@ I need a static website to showcase the info
 
 ## Hindi Typography Updates
 - Added sitewide Hindi typography overrides so Devanagari text no longer breaks apart from English letter-spacing/uppercase styles, and heading/body fonts render more naturally in Hindi mode.
+
+## Contact Experience Updates
+- Replaced the full contact form on the Contact page with direct WhatsApp and email contact cards using the provided WhatsApp number and existing email address.
+- Added quick WhatsApp buttons in both the header and footer for faster direct access to the business contact number.
+- Added a floating WhatsApp button on mobile for quicker direct contact access on smaller screens.
+- Updated the floating WhatsApp button to appear on both mobile and desktop with a visible text label for clearer contact access.
