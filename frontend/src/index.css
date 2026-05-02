@@ -148,4 +148,13 @@ code {
         border-top-color: inherit;
         border-bottom-color: inherit;
     }
+
+    html[lang="hi"] [class*="tracking-"] {
+        letter-spacing: 0 !important;
+        word-spacing: normal !important;
+    }
+
+    html[lang="hi"] [class*="uppercase"] {
+        text-transform: none !important;
+    }
 }
